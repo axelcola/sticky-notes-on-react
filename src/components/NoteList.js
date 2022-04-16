@@ -16,7 +16,7 @@ const NoteList = () => {
   };
   return (
     <div className="container">
-      <div className="notelist">
+      <div className=" notelist">
         <NewNote onSubmit={addTask} />
         {tasks.map((task) => (
           <Note key={task.id} id={task.id} text={task.text} />
