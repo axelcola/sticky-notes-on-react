@@ -1,0 +1,34 @@
+.note {
+    background-color: #fef68a;
+    margin-bottom: 50px;
+    border-radius: 10px;
+    padding: 1rem;
+    min-height: 170px;
+    max-width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#newNote {
+    background-color: #67d7cc !important;
+  }
+  .addNote-text-area {
+    border: none;
+    resize: none;
+    background-color: #67d7cc;
+    min-height: px;
+    max-width: 250px;
+  }
+  
+  .addNote-text-area:focus {
+    outline: none;
+  }
+  .note-text-area {
+    border: none;
+    resize: none;
+    background-color: #fef68a;
+  }
+  
+  .note-text-area:focus {
+    outline: none;
+}  

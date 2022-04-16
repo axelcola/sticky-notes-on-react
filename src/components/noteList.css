@@ -1,0 +1,9 @@
+.notelist {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 15%));
+    justify-content: left;
+  }
+.container {
+  justify-content: center;
+}

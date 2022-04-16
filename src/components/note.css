@@ -1,0 +1,28 @@
+
+.note {
+    background-color: #fef68a;
+    margin-bottom: 50px;
+    border-radius: 10px;
+    padding: 1rem;
+    min-height: 170px;
+    max-width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.note-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.note-text-area {
+    border: none;
+    resize: none;
+    background-color: #fef68a;
+  }
+  
+  .note-text-area:focus {
+    outline: none;
+  }
+
+  
