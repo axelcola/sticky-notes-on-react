@@ -2,6 +2,7 @@ import React from "react";
 import "./note.css";
 import { BiSave } from "react-icons/bi";
 import { IoIosColorPalette } from "react-icons/io";
+import { BsFillTrashFill } from "react-icons/bs";
 
 const Note = ({ text, date }) => {
   return (
@@ -11,10 +12,17 @@ const Note = ({ text, date }) => {
         <small>{date}</small>
         <div className="note-content">
           <div className="containter">
-            <IoIosColorPalette className="color-button" />
             <button className="button">
               {" "}
               <BiSave />
+            </button>
+            <button className="button">
+              {" "}
+              <IoIosColorPalette className="color-button" />
+            </button>
+            <button className="button">
+              {" "}
+              <BsFillTrashFill />
             </button>
           </div>
         </div>
