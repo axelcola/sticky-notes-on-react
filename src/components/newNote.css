@@ -32,3 +32,12 @@
   .note-text-area:focus {
     outline: none;
 }  
+.button-newnote {
+  background-color:#67d7cc !important;
+  box-shadow: none;
+  border: none;
+  align-items: flex-end;
+}
+.color-button{
+  cursor: pointer;
+}

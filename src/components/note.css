@@ -25,4 +25,13 @@
     outline: none;
   }
 
+  .button {
+    background-color:#fef68a;
+    box-shadow: none;
+    border: none;
+    align-items: flex-end;
+  }
+  .color-button{
+    cursor: pointer;
+  }
   
