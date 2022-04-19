@@ -10,7 +10,7 @@ function App() {
     <div className="App">
       <NavbarNotes />
       <Route path="/paper-bin" component={PaperBin} />
-      <Route path="/home" component={NoteList} />
+      <Route path="/" component={NoteList} />
     </div>
   );
 }

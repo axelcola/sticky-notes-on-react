@@ -41,3 +41,9 @@
 .color-button{
   cursor: pointer;
 }
+.icons{
+  color:white;
+  margin-right: 10px;
+  size: 20px;
+  cursor: pointer;
+}

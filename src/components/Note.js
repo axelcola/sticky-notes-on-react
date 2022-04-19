@@ -7,7 +7,7 @@ import { BsFillTrashFill } from "react-icons/bs";
 const Note = ({ text, date }) => {
   return (
     <div className="note">
-      <textarea className="note-text-area">{text}</textarea>
+      <textarea className="note-text-area" defaultValue={text} />
       <div className="note-content">
         <small>{date}</small>
         <div className="note-content">

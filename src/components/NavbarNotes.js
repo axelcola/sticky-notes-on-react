@@ -1,13 +1,13 @@
 import React from "react";
 import { Link } from "wouter";
-import { AiFillHome } from "react-icons/ai";
-import { BsFillTrashFill } from "react-icons/bs";
+import { BiHomeAlt } from "react-icons/bi";
+import { BsTrash } from "react-icons/bs";
 
 const NavbarNotes = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark mb-5">
       <div className="container-fluid">
-        <Link className="navbar-brand" to="#">
+        <Link className="navbar-brand" to="/">
           Sticky Notes
         </Link>
         <button
@@ -24,8 +24,8 @@ const NavbarNotes = () => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link className="nav-link active" aria-current="page" to="home">
-                Home
+              <Link className="nav-link active" aria-current="page" to="/">
+                <BiHomeAlt className="icons" />
               </Link>
             </li>
             <li className="nav-item">
@@ -34,7 +34,7 @@ const NavbarNotes = () => {
                 aria-current="page"
                 to="paper-bin"
               >
-                Paper Bin
+                <BsTrash className="icons" />
               </Link>
             </li>
           </ul>
