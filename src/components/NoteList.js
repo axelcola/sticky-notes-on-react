@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import NewNote from "./NewNote";
 import Note from "./Note";
 import "./noteList.css";
@@ -14,6 +14,13 @@ const NoteList = () => {
       setTasks(updtatedTasks);
     }
   };
+
+  useEffect(() => {
+    if (tasks) {
+      localStorage.setItem("stickyNotesData", JSON.stringify(tasks));
+    }
+  }, [tasks]);
+
   return (
     <div className="container">
       <div className=" notelist">
