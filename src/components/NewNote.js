@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./newNote.css";
 import { v4 as uuidv4 } from "uuid";
 import { BiSave } from "react-icons/bi";
@@ -20,15 +20,14 @@ const NewNote = (props) => {
       deleted: false,
     };
     props.onSubmit(newTask);
-    setInput("");
-    e.target.value = "";
-    console.log(input);
+    document.getElementById("inputNote").value = "";
   };
 
   return (
     <form onSubmit={textSubmit}>
       <div id="newNote" className="note noteList">
         <input
+          id="inputNote"
           onChange={textInput}
           className="addNote-text-area "
           placeholder="Add a new task.."
