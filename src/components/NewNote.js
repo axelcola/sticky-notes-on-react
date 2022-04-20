@@ -17,9 +17,12 @@ const NewNote = (props) => {
     const newTask = {
       id: uuidv4(),
       text: input,
-      completed: false,
+      deleted: false,
     };
     props.onSubmit(newTask);
+    setInput("");
+    e.target.value = "";
+    console.log(input);
   };
 
   return (

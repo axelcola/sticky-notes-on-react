@@ -3,10 +3,11 @@ import "./note.css";
 import { BiSave } from "react-icons/bi";
 import { IoIosColorPalette } from "react-icons/io";
 import { BsFillTrashFill } from "react-icons/bs";
+import { FaTrashRestore } from "react-icons/fa";
 
-const Note = ({ text, date }) => {
+const Note = ({ text, id, date, deleteNote, deleted }) => {
   return (
-    <div className="note">
+    <div className={deleted ? "note deleted" : "note"}>
       <textarea className="note-text-area" defaultValue={text} />
       <div className="note-content">
         <small>{date}</small>
@@ -20,10 +21,17 @@ const Note = ({ text, date }) => {
               {" "}
               <IoIosColorPalette className="color-button" />
             </button>
-            <button className="button">
-              {" "}
-              <BsFillTrashFill />
-            </button>
+            {deleted ? (
+              <button onClick={() => deleteNote(id)} className="button">
+                {" "}
+                <FaTrashRestore className="color-button" />
+              </button>
+            ) : (
+              <button onClick={() => deleteNote(id)} className="button">
+                {" "}
+                <BsFillTrashFill />
+              </button>
+            )}
           </div>
         </div>
       </div>

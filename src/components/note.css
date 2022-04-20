@@ -10,6 +10,9 @@
     flex-direction: column;
     justify-content: space-between;
 }
+.note.deleted {
+  background-color: grey !important;
+}
 .note-content {
     display: flex;
     align-items: center;

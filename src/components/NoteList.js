@@ -12,11 +12,19 @@ const NoteList = () => {
       const updtatedTasks = [task, ...tasks];
       setTasks(updtatedTasks);
       window.localStorage.setItem("notes", JSON.stringify(updtatedTasks));
-      console.log(tasks);
-      console.log(updtatedTasks);
-      console.log(task);
     }
   };
+  const deleteNote = (id) => {
+    const deletedNotes = tasks.map((task) => {
+      if (task.id === id) {
+        task.deleted = !task.deleted;
+      }
+      return task;
+    });
+    setTasks(deletedNotes);
+    console.log(deletedNotes, tasks);
+  };
+
   useEffect(() => {
     const savedTasks = JSON.parse(localStorage.getItem("notes"));
     if (savedTasks) setTasks(savedTasks);
@@ -27,7 +35,13 @@ const NoteList = () => {
       <div className=" notelist">
         <NewNote onSubmit={addTask} />
         {tasks.map((task) => (
-          <Note key={task.id} id={task.id} text={task.text} />
+          <Note
+            key={task.id}
+            id={task.id}
+            text={task.text}
+            deleted={task.deleted}
+            deleteNote={deleteNote}
+          />
         ))}
       </div>
     </div>
