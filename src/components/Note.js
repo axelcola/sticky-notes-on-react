@@ -6,7 +6,15 @@ import { BsFillTrashFill, BsFillCircleFill } from "react-icons/bs";
 import { FaTrashRestore } from "react-icons/fa";
 import { Dropdown } from "react-bootstrap";
 
-const Note = ({ text, id, date, deleteNote, deleted, className }) => {
+const Note = ({
+  text,
+  id,
+  date,
+  deleteNote,
+  deletePerm,
+  deleted,
+  className,
+}) => {
   return (
     <div className={className}>
       <textarea className="note-text-area" defaultValue={text} />
@@ -42,10 +50,16 @@ const Note = ({ text, id, date, deleteNote, deleted, className }) => {
               {" "}
             </button> */}
             {deleted ? (
-              <button onClick={() => deleteNote(id)} className="button">
-                {" "}
-                <FaTrashRestore className="color-button" />
-              </button>
+              <>
+                <button onClick={() => deleteNote(id)} className="button">
+                  {" "}
+                  <FaTrashRestore className="color-button" />
+                </button>
+                <button onClick={() => deletePerm(id)} className="button">
+                  {" "}
+                  <BsFillTrashFill />
+                </button>
+              </>
             ) : (
               <button onClick={() => deleteNote(id)} className="button">
                 {" "}
