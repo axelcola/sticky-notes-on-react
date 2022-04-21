@@ -23,6 +23,7 @@ const NoteList = () => {
     });
     setTasks(deletedNotes);
     console.log(deletedNotes, tasks);
+    window.localStorage.setItem("notes", JSON.stringify(deletedNotes));
   };
 
   useEffect(() => {

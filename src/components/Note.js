@@ -5,9 +5,9 @@ import { IoIosColorPalette } from "react-icons/io";
 import { BsFillTrashFill } from "react-icons/bs";
 import { FaTrashRestore } from "react-icons/fa";
 
-const Note = ({ text, id, date, deleteNote, deleted }) => {
+const Note = ({ text, id, date, deleteNote, deleted, className }) => {
   return (
-    <div className={deleted ? "note deleted" : "note"}>
+    <div className={"note"}>
       <textarea className="note-text-area" defaultValue={text} />
       <div className="note-content">
         <small>{date}</small>
