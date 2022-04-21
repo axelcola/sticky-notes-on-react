@@ -22,6 +22,15 @@ const PaperBin = () => {
     console.log(restoredNotes, tasks);
     window.localStorage.setItem("notes", JSON.stringify(restoredNotes));
   };
+  const deletePerm = (id) => {
+    if (
+      window.confirm("Are you sure you want to delete this note permanently?")
+    ) {
+      let newNotesArray = tasks.filter((note) => note.id !== id);
+      setTasks(newNotesArray);
+      window.localStorage.setItem("notes", JSON.stringify(newNotesArray));
+    }
+  };
 
   return (
     <>
@@ -35,6 +44,7 @@ const PaperBin = () => {
               deleted={task.deleted}
               deleteNote={restoreNote}
               className={task.deleted ? "note" : "note deleted"}
+              deletePerm={deletePerm}
             />
           ))}
         </div>

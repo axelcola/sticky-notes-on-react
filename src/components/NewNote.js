@@ -50,12 +50,15 @@ const NewNote = (props) => {
                   <Dropdown.Menu className="dropdown-target">
                     <Dropdown.Item>
                       <BsFillCircleFill id="yellow" className="circle yellow" />
+                      <p className="drop-text"> In progress</p>
                     </Dropdown.Item>
                     <Dropdown.Item>
                       <BsFillCircleFill id="red" className="circle red" />
+                      <p className="drop-text"> Not started</p>
                     </Dropdown.Item>
                     <Dropdown.Item>
                       <BsFillCircleFill id="green" className="circle green" />
+                      <p className="drop-text"> Completed</p>
                     </Dropdown.Item>
                   </Dropdown.Menu>
                 </Dropdown>

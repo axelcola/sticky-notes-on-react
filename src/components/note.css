@@ -43,6 +43,9 @@
     margin-bottom: -6px;
     margin-right: 115px;
   }
+  .circle{
+    margin-right: 1px;
+  }
   .circle.yellow{
     color: #fef68a;
   }
@@ -53,9 +56,12 @@
     color: #a5fe8a;
   }
   .dropdown-target{
-    background-color: rgb(95, 95, 95) !important;
+    background-color: rgb(151, 151, 151) !important;
     max-width: 15px !important;  
   }
   .drop-button {
     background-color: #fef68a !important;
+  }
+  .drop-text{
+    color: white !important;
   }
