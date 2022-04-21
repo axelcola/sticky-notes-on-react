@@ -2,7 +2,6 @@
   "name": "react-sticky-notes",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://axelcola.github.io/sticky-notes-on-react/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.1.1",
@@ -21,8 +20,6 @@
     "wouter": "^2.8.0-alpha.2"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
