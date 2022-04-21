@@ -1,5 +1,5 @@
-ToDoApp with React JS
-Check out the final result [here](https://axelcola.github.io/sticky-notes-on-react/)..
+<h1>Sticky Notes App with React JS</h1>
+<h1>Check out the final result [here](https://axelcola.github.io/sticky-notes-on-react/)..</h1>
 
 I worked on this page to put into practice my knowledge of Html, Css, Javascript and bootstrap.
 
