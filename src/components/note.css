@@ -38,3 +38,24 @@
     cursor: pointer;
   }
   
+  .containter-buttons {
+    display: flex;
+    margin-bottom: -6px;
+    margin-right: 115px;
+  }
+  .circle.yellow{
+    color: #fef68a;
+  }
+  .circle.red{
+    color: #fe8a8a;
+  }
+  .circle.green{
+    color: #a5fe8a;
+  }
+  .dropdown-target{
+    background-color: rgb(95, 95, 95) !important;
+    max-width: 15px !important;  
+  }
+  .drop-button {
+    background-color: #fef68a !important;
+  }
