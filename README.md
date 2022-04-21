@@ -1,70 +1,28 @@
-# Getting Started with Create React App
+ToDoApp with React JS
+Check out the final result [here](https://axelcola.github.io/sticky-notes-on-react/)..
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+I worked on this page to put into practice my knowledge of Html, Css, Javascript and bootstrap.
 
-## Available Scripts
+This is a list of functions that the page should have that I got on the internet:
 
-In the project directory, you can run:
+• As user, i can create a new Post it.
 
-### `npm start`
+• As user, i can see all the Posts in the workspace.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+• As user, i can edit a Post.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+• As user, i can see the date of the last modification.
 
-### `npm test`
+• As user, i can move a Post to the Paper Bin.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+• As user, i can open the Paper Bin to see all the post that gave been moved there.
 
-### `npm run build`
+• As user, i can restore a Post from the Paper Bin to the workspace.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+• As user, i can delete a Post permanently.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+• As user, i can see if the Paper Bin have posts looking at the Paper Bin icon.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+• As user, all the Posts on the Workspace and Paper Bin are save to LocalStorage.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+• As user, I can select diferents colors for new Posts.

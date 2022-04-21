@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./newNote.css";
 import { v4 as uuidv4 } from "uuid";
 import { BiSave } from "react-icons/bi";
 import { IoIosColorPalette } from "react-icons/io";
-import { BsFillTrashFill, BsFillCircleFill } from "react-icons/bs";
-import { FaTrashRestore } from "react-icons/fa";
+import { BsFillCircleFill } from "react-icons/bs";
 import { Dropdown } from "react-bootstrap";
 
 const NewNote = (props) => {
