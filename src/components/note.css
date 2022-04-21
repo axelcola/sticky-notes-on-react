@@ -11,7 +11,7 @@
     justify-content: space-between;
 }
 .note.deleted {
-  background-color: grey !important;
+  display: none;
 }
 .note-content {
     display: flex;

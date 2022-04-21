@@ -34,6 +34,7 @@ const PaperBin = () => {
               text={task.text}
               deleted={task.deleted}
               deleteNote={restoreNote}
+              className={task.deleted ? "note" : "note deleted"}
             />
           ))}
         </div>

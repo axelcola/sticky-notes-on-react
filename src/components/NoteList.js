@@ -42,6 +42,7 @@ const NoteList = () => {
             text={task.text}
             deleted={task.deleted}
             deleteNote={deleteNote}
+            className={task.deleted ? "note deleted" : "note"}
           />
         ))}
       </div>

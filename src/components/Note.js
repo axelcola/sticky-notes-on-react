@@ -7,7 +7,7 @@ import { FaTrashRestore } from "react-icons/fa";
 
 const Note = ({ text, id, date, deleteNote, deleted, className }) => {
   return (
-    <div className={"note"}>
+    <div className={className}>
       <textarea className="note-text-area" defaultValue={text} />
       <div className="note-content">
         <small>{date}</small>
