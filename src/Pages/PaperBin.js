@@ -8,7 +8,6 @@ const PaperBin = () => {
     const savedTasks = JSON.parse(localStorage.getItem("notes"));
     const delNotes = savedTasks.filter((task) => task.deleted);
     if (delNotes) setTasks(delNotes);
-    console.log(delNotes);
   }, []);
 
   const restoreNote = (id) => {
@@ -19,7 +18,6 @@ const PaperBin = () => {
       return task;
     });
     setTasks(restoredNotes);
-    console.log(restoredNotes, tasks);
     window.localStorage.setItem("notes", JSON.stringify(restoredNotes));
   };
   const deletePerm = (id) => {
@@ -45,6 +43,7 @@ const PaperBin = () => {
               deleteNote={restoreNote}
               className={task.deleted ? "note" : "note deleted"}
               deletePerm={deletePerm}
+              date={task.date}
             />
           ))}
         </div>

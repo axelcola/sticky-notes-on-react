@@ -58,4 +58,17 @@
 }
 .circle{
   margin-right: 1em;
+  background-color: #67d7cc !important;
+}
+.drop-items{
+  display: flex;
+}
+.drops-buttons{
+  box-shadow: none;
+  border: none;
+  background-color: rgb(128, 128, 128) !important;
+
+}
+.indicator {
+  margin-top: 14px;
 }

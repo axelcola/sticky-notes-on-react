@@ -14,61 +14,66 @@ const Note = ({
   deletePerm,
   deleted,
   className,
+  color,
 }) => {
   return (
-    <div className={className}>
-      <textarea className="note-text-area" defaultValue={text} />
+    <div className={`note ${color} ${className}`}>
+      <textarea className={`note-text-area  ${color}`} defaultValue={text} />
       <div className="note-content">
-        <small>{date}</small>
         <div className="note-content">
           <div className="containter-buttons">
-            <button className="button">
+            <button className={`button  ${color}`}>
               {" "}
               <BiSave />
             </button>
-            <div className="button">
-              <Dropdown>
-                <Dropdown.Toggle variant="none">
-                  <IoIosColorPalette />
-                </Dropdown.Toggle>
-
-                <Dropdown.Menu className="dropdown-target">
-                  <Dropdown.Item>
-                    <BsFillCircleFill id="yellow" className="circle yellow" />
-                    <p className="drop-text"> In progress</p>
-                  </Dropdown.Item>
-                  <Dropdown.Item>
-                    <BsFillCircleFill id="red" className="circle red" />
-                    <p className="drop-text"> Not started</p>
-                  </Dropdown.Item>
-                  <Dropdown.Item>
-                    <BsFillCircleFill id="green" className="circle green" />
-                    <p className="drop-text"> Completed</p>
-                  </Dropdown.Item>
-                </Dropdown.Menu>
-              </Dropdown>
-            </div>
 
             {/* <button className="button">
               {" "}
             </button> */}
             {deleted ? (
               <>
-                <button onClick={() => deleteNote(id)} className="button">
+                <button onClick={() => deleteNote(id)} className={`button  `}>
                   {" "}
-                  <FaTrashRestore className="color-button" />
+                  <FaTrashRestore className={`color-button  ${color}`} />
                 </button>
-                <button onClick={() => deletePerm(id)} className="button">
+                <button
+                  onClick={() => deletePerm(id)}
+                  className={`button  ${color}`}
+                >
                   {" "}
                   <BsFillTrashFill />
                 </button>
               </>
             ) : (
-              <button onClick={() => deleteNote(id)} className="button">
+              <button
+                onClick={() => deleteNote(id)}
+                className={`button  ${color}`}
+              >
                 {" "}
                 <BsFillTrashFill />
               </button>
             )}
+            <Dropdown className={`button  ${color}`}>
+              <Dropdown.Toggle variant="none">
+                <IoIosColorPalette />
+              </Dropdown.Toggle>
+
+              <Dropdown.Menu className="dropdown-target">
+                <Dropdown.Item>
+                  <BsFillCircleFill id="yellow" className="circle yellow" />
+                  <p className="drop-text"> In progress</p>
+                </Dropdown.Item>
+                <Dropdown.Item>
+                  <BsFillCircleFill id="red" className="circle red" />
+                  <p className="drop-text"> Not started</p>
+                </Dropdown.Item>
+                <Dropdown.Item>
+                  <BsFillCircleFill id="green" className="circle green" />
+                  <p className="drop-text"> Completed</p>
+                </Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
+            <small className="date">{date}</small>
           </div>
         </div>
       </div>

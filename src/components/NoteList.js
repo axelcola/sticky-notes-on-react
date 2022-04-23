@@ -22,7 +22,6 @@ const NoteList = () => {
       return task;
     });
     setTasks(deletedNotes);
-    console.log(deletedNotes, tasks);
     window.localStorage.setItem("notes", JSON.stringify(deletedNotes));
   };
 
@@ -41,8 +40,10 @@ const NoteList = () => {
             id={task.id}
             text={task.text}
             deleted={task.deleted}
+            date={task.date}
             deleteNote={deleteNote}
-            className={task.deleted ? "note deleted" : "note"}
+            className={task.deleted ? "deleted" : ""}
+            color={task.color}
           />
         ))}
       </div>
