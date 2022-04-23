@@ -32,9 +32,12 @@ const Note = ({
             </button> */}
             {deleted ? (
               <>
-                <button onClick={() => deleteNote(id)} className={`button  `}>
+                <button
+                  onClick={() => deleteNote(id)}
+                  className={`button  ${color} `}
+                >
                   {" "}
-                  <FaTrashRestore className={`color-button  ${color}`} />
+                  <FaTrashRestore className={`button  ${color}`} />
                 </button>
                 <button
                   onClick={() => deletePerm(id)}

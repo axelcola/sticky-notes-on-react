@@ -44,6 +44,7 @@ const PaperBin = () => {
               className={task.deleted ? "note" : "note deleted"}
               deletePerm={deletePerm}
               date={task.date}
+              color={task.color}
             />
           ))}
         </div>
