@@ -29,8 +29,8 @@ const NewNote = (props) => {
     document.getElementById("inputNote").value = "";
   };
 
-  const changeColor = (coso) => {
-    setColor(coso);
+  const changeColor = (newColor) => {
+    setColor(newColor);
     console.log(color);
   };
 

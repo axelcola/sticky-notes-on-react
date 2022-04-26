@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./note.css";
 import { BiSave } from "react-icons/bi";
 import { IoIosColorPalette } from "react-icons/io";
@@ -15,10 +15,26 @@ const Note = ({
   deleted,
   className,
   color,
+  editNote,
 }) => {
+  // const [input, setInput] = useState(text);
+
+  const changeColor = (e) => {
+    const editProps = {
+      id: id,
+      text: e.target.value,
+      color: color,
+    };
+    editNote(editProps);
+  };
+
   return (
     <div className={`note ${color} ${className}`}>
-      <textarea className={`note-text-area  ${color}`} defaultValue={text} />
+      <textarea
+        className={`note-text-area  ${color}`}
+        defaultValue={text}
+        onChange={changeColor}
+      />
       <div className="note-content">
         <div className="note-content">
           <div className="containter-buttons">
@@ -26,10 +42,6 @@ const Note = ({
               {" "}
               <BiSave />
             </button>
-
-            {/* <button className="button">
-              {" "}
-            </button> */}
             {deleted ? (
               <>
                 <button

@@ -14,6 +14,18 @@ const NoteList = () => {
       window.localStorage.setItem("notes", JSON.stringify(updtatedTasks));
     }
   };
+  const editNote = (note) => {
+    const noteToChange = tasks.map((task) => {
+      if (task.id === note.id) {
+        task.text = note.text;
+      }
+      console.log(note.text);
+      return task;
+    });
+    setTasks(noteToChange);
+    window.localStorage.setItem("notes", JSON.stringify(noteToChange));
+  };
+
   const deleteNote = (id) => {
     const deletedNotes = tasks.map((task) => {
       if (task.id === id) {
@@ -44,6 +56,7 @@ const NoteList = () => {
             deleteNote={deleteNote}
             className={task.deleted ? "deleted" : ""}
             color={task.color}
+            editNote={editNote}
           />
         ))}
       </div>
