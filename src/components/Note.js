@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import "./note.css";
-import { BiSave } from "react-icons/bi";
+import { AiOutlinePlus } from "react-icons/ai";
 import { IoIosColorPalette } from "react-icons/io";
 import { BsFillTrashFill, BsFillCircleFill } from "react-icons/bs";
 import { FaTrashRestore } from "react-icons/fa";
@@ -17,9 +17,7 @@ const Note = ({
   color,
   editNote,
 }) => {
-  // const [input, setInput] = useState(text);
-
-  const changeColor = (e) => {
+  const changeNote = (e) => {
     const editProps = {
       id: id,
       text: e.target.value,
@@ -33,15 +31,11 @@ const Note = ({
       <textarea
         className={`note-text-area  ${color}`}
         defaultValue={text}
-        onChange={changeColor}
+        onChange={changeNote}
       />
       <div className="note-content">
         <div className="note-content">
           <div className="containter-buttons">
-            <button className={`button  ${color}`}>
-              {" "}
-              <BiSave />
-            </button>
             {deleted ? (
               <>
                 <button
@@ -75,16 +69,13 @@ const Note = ({
 
               <Dropdown.Menu className="dropdown-target">
                 <Dropdown.Item>
-                  <BsFillCircleFill id="yellow" className="circle yellow" />
-                  <p className="drop-text"> In progress</p>
+                  <div className="squere green" />
                 </Dropdown.Item>
                 <Dropdown.Item>
-                  <BsFillCircleFill id="red" className="circle red" />
-                  <p className="drop-text"> Not started</p>
+                  <div className="squere yellow" />
                 </Dropdown.Item>
                 <Dropdown.Item>
-                  <BsFillCircleFill id="green" className="circle green" />
-                  <p className="drop-text"> Completed</p>
+                  <div className="squere red" />
                 </Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>

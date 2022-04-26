@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./newNote.css";
 import { v4 as uuidv4 } from "uuid";
-import { BiSave } from "react-icons/bi";
+import { AiOutlinePlus } from "react-icons/ai";
 import { IoIosColorPalette } from "react-icons/io";
 import { BsFillCircleFill } from "react-icons/bs";
 import { Dropdown } from "react-bootstrap";
@@ -42,13 +42,14 @@ const NewNote = (props) => {
           onChange={textInput}
           className="addNote-text-area "
           placeholder="Add a new task.."
+          type="text"
         ></input>
         <div className="dropdown">
           <div className="note-content">
             <div className="containter-buttons">
               <button className="button-newnote">
                 {" "}
-                <BiSave />
+                <AiOutlinePlus />
               </button>
               <div className="button">
                 <Dropdown className="button newNote">
@@ -58,7 +59,7 @@ const NewNote = (props) => {
 
                   <Dropdown.Menu className="dropdown-target">
                     <button
-                      className="drops-buttons"
+                      className="drops-buttons squere red"
                       name="group1"
                       value="red"
                       type="radio"
@@ -66,14 +67,10 @@ const NewNote = (props) => {
                       checked={color === "red" ? true : false}
                       onClick={() => changeColor("red")}
                     >
-                      <Dropdown.Item className="drop-items">
-                        <BsFillCircleFill id="red" className="circle red" />
-
-                        <p className="drop-text"> In progress</p>
-                      </Dropdown.Item>
+                      <Dropdown.Item className="drop-items"></Dropdown.Item>
                     </button>
                     <button
-                      className="drops-buttons"
+                      className="drops-buttons squere yellow"
                       name="group1"
                       type="radio"
                       value="yellow"
@@ -81,16 +78,10 @@ const NewNote = (props) => {
                       checked={color === "yellow" ? true : false}
                       onClick={() => changeColor("yellow")}
                     >
-                      <Dropdown.Item className="drop-items">
-                        <BsFillCircleFill
-                          id="yellow"
-                          className="circle yellow"
-                        />
-                        <p className="drop-text"> Not started</p>
-                      </Dropdown.Item>
+                      <Dropdown.Item className="drop-items"></Dropdown.Item>
                     </button>
                     <button
-                      className="drops-buttons"
+                      className="drops-buttons squere green"
                       name="group1"
                       type="radio"
                       value="green"
@@ -98,10 +89,7 @@ const NewNote = (props) => {
                       checked={color === "green" ? true : false}
                       onClick={() => changeColor("green")}
                     >
-                      <Dropdown.Item className="drop-items">
-                        <BsFillCircleFill id="green" className="circle green" />
-                        <p className="drop-text"> Completed</p>
-                      </Dropdown.Item>
+                      <Dropdown.Item className="drop-items"></Dropdown.Item>
                     </button>
                   </Dropdown.Menu>
                 </Dropdown>
