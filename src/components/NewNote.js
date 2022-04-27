@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./newNote.css";
 import { v4 as uuidv4 } from "uuid";
-import { AiOutlinePlus } from "react-icons/ai";
+import { BiCommentAdd } from "react-icons/bi";
 import { IoIosColorPalette } from "react-icons/io";
 import { BsFillCircleFill } from "react-icons/bs";
 import { Dropdown } from "react-bootstrap";
@@ -37,19 +37,19 @@ const NewNote = (props) => {
   return (
     <form onSubmit={textSubmit}>
       <div id="newNote" className="note noteList">
-        <input
+        <textarea
           id="inputNote"
           onChange={textInput}
           className="addNote-text-area "
           placeholder="Add a new task.."
           type="text"
-        ></input>
+        ></textarea>
         <div className="dropdown">
           <div className="note-content">
             <div className="containter-buttons">
               <button className="button-newnote">
                 {" "}
-                <AiOutlinePlus />
+                <BiCommentAdd />
               </button>
               <div className="button">
                 <Dropdown className="button newNote">
