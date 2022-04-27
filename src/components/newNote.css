@@ -1,5 +1,5 @@
 
-#newNote {
+.newNote {
   background-color: #67d7cc !important;
 }
 .addNote-text-area {
@@ -57,7 +57,4 @@
   background-color: rgb(128, 128, 128) !important;
   margin-left: 1px;
 
-}
-.indicator {
-  margin-top: 14px;
 }

@@ -3,13 +3,12 @@ import "./newNote.css";
 import { v4 as uuidv4 } from "uuid";
 import { BiCommentAdd } from "react-icons/bi";
 import { IoIosColorPalette } from "react-icons/io";
-import { BsFillCircleFill } from "react-icons/bs";
 import { Dropdown } from "react-bootstrap";
 import { getCurrentDate } from "./getDate";
 
 const NewNote = (props) => {
   const [input, setInput] = useState("");
-  const [color, setColor] = useState("red");
+  const [color, setColor] = useState("newNote");
 
   const textInput = (e) => {
     setInput(e.target.value);
@@ -27,6 +26,7 @@ const NewNote = (props) => {
     };
     props.onSubmit(newTask);
     document.getElementById("inputNote").value = "";
+    setColor("newNote");
   };
 
   const changeColor = (newColor) => {
@@ -36,23 +36,23 @@ const NewNote = (props) => {
 
   return (
     <form onSubmit={textSubmit}>
-      <div id="newNote" className="note noteList">
+      <div className={`note ${color}`}>
         <textarea
           id="inputNote"
           onChange={textInput}
-          className="addNote-text-area "
+          className={`addNote-text-area ${color}`}
           placeholder="Add a new task.."
           type="text"
         ></textarea>
         <div className="dropdown">
           <div className="note-content">
             <div className="containter-buttons">
-              <button className="button-newnote">
+              <button className={`button-newnote ${color}`}>
                 {" "}
                 <BiCommentAdd />
               </button>
               <div className="button">
-                <Dropdown className="button newNote">
+                <Dropdown className={`button ${color}`}>
                   <Dropdown.Toggle variant="none">
                     <IoIosColorPalette />
                   </Dropdown.Toggle>
@@ -93,12 +93,6 @@ const NewNote = (props) => {
                     </button>
                   </Dropdown.Menu>
                 </Dropdown>
-              </div>
-              <div className="color-indicator">
-                <BsFillCircleFill
-                  id="red"
-                  className={`circle indicator ${color}`}
-                />
               </div>
             </div>
           </div>
