@@ -4,7 +4,6 @@ const Searcher = (props) => {
   const sendInfo = (e) => {
     const info = e.target.value;
     props.searcher(info);
-    console.log(info);
   };
   return (
     <>

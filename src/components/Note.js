@@ -33,7 +33,6 @@ const Note = ({
       color: e.target.id,
     };
     editNote(editProps);
-    console.log(editProps);
   };
 
   return (

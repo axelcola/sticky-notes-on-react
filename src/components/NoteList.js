@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import NavbarNotes from "./NavbarNotes";
 import NewNote from "./NewNote";
 import Note from "./Note";
 import "./noteList.css";
@@ -22,7 +23,6 @@ const NoteList = () => {
       const results = savedTasks.filter((task) =>
         task.text.toLowerCase().includes(textsearch)
       );
-      console.log(tasks);
       setTasks(results);
     }
   };
@@ -32,7 +32,6 @@ const NoteList = () => {
         task.text = note.text;
         task.color = note.color;
       }
-      console.log(note.text);
       return task;
     });
     setTasks(noteToChange);
@@ -56,25 +55,28 @@ const NoteList = () => {
   }, []);
 
   return (
-    <div className="container">
-      <Searcher searcher={searcherInfo} />
-      <div className=" notelist">
-        <NewNote onSubmit={addTask} />
-        {tasks.map((task) => (
-          <Note
-            key={task.id}
-            id={task.id}
-            text={task.text}
-            deleted={task.deleted}
-            date={task.date}
-            deleteNote={deleteNote}
-            className={task.deleted ? "deleted" : ""}
-            color={task.color}
-            editNote={editNote}
-          />
-        ))}
+    <>
+      <NavbarNotes number={tasks} />
+      <div className="container">
+        <Searcher searcher={searcherInfo} />
+        <div className=" notelist">
+          <NewNote onSubmit={addTask} />
+          {tasks.map((task) => (
+            <Note
+              key={task.id}
+              id={task.id}
+              text={task.text}
+              deleted={task.deleted}
+              date={task.date}
+              deleteNote={deleteNote}
+              className={task.deleted ? "deleted" : ""}
+              color={task.color}
+              editNote={editNote}
+            />
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

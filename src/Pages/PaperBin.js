@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import NavbarNotes from "../components/NavbarNotes";
 import Note from "../components/Note";
 
 const PaperBin = () => {
@@ -32,6 +33,7 @@ const PaperBin = () => {
 
   return (
     <>
+      <NavbarNotes number={tasks} />
       <div className="container">
         <div className=" notelist">
           {tasks.map((task) => (

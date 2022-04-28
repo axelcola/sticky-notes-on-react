@@ -8,8 +8,8 @@ import PaperBin from "./Pages/PaperBin";
 function App() {
   return (
     <div className="App">
-      <NavbarNotes />
       <Route path="/paper-bin" component={PaperBin} />
+
       <Route path="/sticky-notes-on-react" component={NoteList} />
     </div>
   );

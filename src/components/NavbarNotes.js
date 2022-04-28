@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "wouter";
 import { BiHomeAlt } from "react-icons/bi";
 import { BsTrash } from "react-icons/bs";
+import "./navbar.css";
 
-const NavbarNotes = () => {
+const NavbarNotes = (props) => {
+  const nNotes = props.number.filter((note) => note.deleted).length;
+
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark mb-5">
       <div className="container-fluid">
@@ -40,6 +43,9 @@ const NavbarNotes = () => {
               >
                 <BsTrash className="icons" />
               </Link>
+            </li>
+            <li className="nav-item number-notes">
+              <p>{nNotes}</p>
             </li>
           </ul>
         </div>
