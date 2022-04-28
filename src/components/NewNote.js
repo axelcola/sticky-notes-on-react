@@ -29,9 +29,8 @@ const NewNote = (props) => {
     setColor("newNote");
   };
 
-  const changeColor = (newColor) => {
-    setColor(newColor);
-    console.log(color);
+  const changeColor = (e) => {
+    setColor(e.target.id);
   };
 
   return (
@@ -56,41 +55,28 @@ const NewNote = (props) => {
                   <Dropdown.Toggle variant="none">
                     <IoIosColorPalette />
                   </Dropdown.Toggle>
-
                   <Dropdown.Menu className="dropdown-target">
-                    <button
-                      className="drops-buttons squere red"
-                      name="group1"
-                      value="red"
-                      type="radio"
-                      id="radio-1"
-                      checked={color === "red" ? true : false}
-                      onClick={() => changeColor("red")}
-                    >
-                      <Dropdown.Item className="drop-items"></Dropdown.Item>
-                    </button>
-                    <button
-                      className="drops-buttons squere yellow"
-                      name="group1"
-                      type="radio"
-                      value="yellow"
-                      id="radio-2"
-                      checked={color === "yellow" ? true : false}
-                      onClick={() => changeColor("yellow")}
-                    >
-                      <Dropdown.Item className="drop-items"></Dropdown.Item>
-                    </button>
-                    <button
-                      className="drops-buttons squere green"
-                      name="group1"
-                      type="radio"
-                      value="green"
-                      id="radio-3"
-                      checked={color === "green" ? true : false}
-                      onClick={() => changeColor("green")}
-                    >
-                      <Dropdown.Item className="drop-items"></Dropdown.Item>
-                    </button>
+                    <Dropdown.Item>
+                      <div
+                        onClick={changeColor}
+                        id="green"
+                        className="squere green"
+                      />
+                    </Dropdown.Item>
+                    <Dropdown.Item>
+                      <div
+                        className="squere yellow"
+                        onClick={changeColor}
+                        id="yellow"
+                      />
+                    </Dropdown.Item>
+                    <Dropdown.Item>
+                      <div
+                        className="squere red"
+                        onClick={changeColor}
+                        id="red"
+                      />
+                    </Dropdown.Item>
                   </Dropdown.Menu>
                 </Dropdown>
               </div>

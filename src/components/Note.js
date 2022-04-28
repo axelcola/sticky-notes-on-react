@@ -1,8 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import "./note.css";
-import { AiOutlinePlus } from "react-icons/ai";
 import { IoIosColorPalette } from "react-icons/io";
-import { BsFillTrashFill, BsFillCircleFill } from "react-icons/bs";
+import { BsFillTrashFill } from "react-icons/bs";
 import { FaTrashRestore } from "react-icons/fa";
 import { Dropdown } from "react-bootstrap";
 
@@ -17,13 +16,24 @@ const Note = ({
   color,
   editNote,
 }) => {
+  let currentColor;
   const changeNote = (e) => {
     const editProps = {
       id: id,
       text: e.target.value,
-      color: color,
+      color: currentColor,
     };
     editNote(editProps);
+  };
+  const changeColor = (e) => {
+    currentColor = e.target.value;
+    const editProps = {
+      id: id,
+      text: text,
+      color: e.target.id,
+    };
+    editNote(editProps);
+    console.log(editProps);
   };
 
   return (
@@ -69,13 +79,21 @@ const Note = ({
 
               <Dropdown.Menu className="dropdown-target">
                 <Dropdown.Item>
-                  <div className="squere green" />
+                  <div
+                    onClick={changeColor}
+                    id="green"
+                    className="squere green"
+                  />
                 </Dropdown.Item>
                 <Dropdown.Item>
-                  <div className="squere yellow" />
+                  <div
+                    className="squere yellow"
+                    onClick={changeColor}
+                    id="yellow"
+                  />
                 </Dropdown.Item>
                 <Dropdown.Item>
-                  <div className="squere red" />
+                  <div className="squere red" onClick={changeColor} id="red" />
                 </Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>

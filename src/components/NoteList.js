@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import NewNote from "./NewNote";
 import Note from "./Note";
 import "./noteList.css";
+import Searcher from "./Searcher";
 
 const NoteList = () => {
   const [tasks, setTasks] = useState([]);
@@ -14,10 +15,20 @@ const NoteList = () => {
       window.localStorage.setItem("notes", JSON.stringify(updtatedTasks));
     }
   };
+  const searcherInfo = (textsearch) => {
+    if (textsearch) {
+      const results = tasks.filter((task) =>
+        task.text.toLowerCase().includes(textsearch)
+      );
+      console.log(results);
+      setTasks(results);
+    }
+  };
   const editNote = (note) => {
     const noteToChange = tasks.map((task) => {
       if (task.id === note.id) {
         task.text = note.text;
+        task.color = note.color;
       }
       console.log(note.text);
       return task;
@@ -44,6 +55,7 @@ const NoteList = () => {
 
   return (
     <div className="container">
+      <Searcher searcher={searcherInfo} />
       <div className=" notelist">
         <NewNote onSubmit={addTask} />
         {tasks.map((task) => (
