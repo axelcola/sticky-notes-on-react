@@ -64,39 +64,46 @@ const Note = ({
                 </button>
               </>
             ) : (
-              <button
-                onClick={() => deleteNote(id)}
-                className={`button  ${color}`}
-              >
-                {" "}
-                <BsFillTrashFill />
-              </button>
-            )}
-            <Dropdown className={`button  ${color}`}>
-              <Dropdown.Toggle variant="none">
-                <IoIosColorPalette />
-              </Dropdown.Toggle>
+              <>
+                <button
+                  onClick={() => deleteNote(id)}
+                  className={`button  ${color}`}
+                >
+                  {" "}
+                  <BsFillTrashFill />
+                </button>
 
-              <Dropdown.Menu className="dropdown-target">
-                <Dropdown.Item>
-                  <div
-                    onClick={changeColor}
-                    id="green"
-                    className="squere green"
-                  />
-                </Dropdown.Item>
-                <Dropdown.Item>
-                  <div
-                    className="squere yellow"
-                    onClick={changeColor}
-                    id="yellow"
-                  />
-                </Dropdown.Item>
-                <Dropdown.Item>
-                  <div className="squere red" onClick={changeColor} id="red" />
-                </Dropdown.Item>
-              </Dropdown.Menu>
-            </Dropdown>
+                <Dropdown className={`button  ${color}`}>
+                  <Dropdown.Toggle variant="none">
+                    <IoIosColorPalette />
+                  </Dropdown.Toggle>
+
+                  <Dropdown.Menu className="dropdown-target">
+                    <Dropdown.Item>
+                      <div
+                        onClick={changeColor}
+                        id="green"
+                        className="squere green"
+                      />
+                    </Dropdown.Item>
+                    <Dropdown.Item>
+                      <div
+                        className="squere yellow"
+                        onClick={changeColor}
+                        id="yellow"
+                      />
+                    </Dropdown.Item>
+                    <Dropdown.Item>
+                      <div
+                        className="squere red"
+                        onClick={changeColor}
+                        id="red"
+                      />
+                    </Dropdown.Item>
+                  </Dropdown.Menu>
+                </Dropdown>
+              </>
+            )}
             <small className="date">{date}</small>
           </div>
         </div>

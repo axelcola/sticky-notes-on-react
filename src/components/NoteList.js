@@ -16,11 +16,13 @@ const NoteList = () => {
     }
   };
   const searcherInfo = (textsearch) => {
+    const savedTasks = JSON.parse(localStorage.getItem("notes"));
+    if (savedTasks) setTasks(savedTasks);
     if (textsearch) {
-      const results = tasks.filter((task) =>
+      const results = savedTasks.filter((task) =>
         task.text.toLowerCase().includes(textsearch)
       );
-      console.log(results);
+      console.log(tasks);
       setTasks(results);
     }
   };
