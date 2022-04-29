@@ -40,7 +40,7 @@ const NavbarNotes = (props) => {
               <Link
                 className="nav-link active"
                 aria-current="page"
-                to="paper-bin"
+                to="/sticky-notes-on-react/paper-bin"
               >
                 <BsTrash className="icons" />
               </Link>

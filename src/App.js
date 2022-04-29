@@ -7,7 +7,7 @@ import PaperBin from "./Pages/PaperBin";
 function App() {
   return (
     <div className="App">
-      <Route path="/paper-bin" component={PaperBin} />
+      <Route path="/sticky-notes-on-react/paper-bin" component={PaperBin} />
       <Route path="/sticky-notes-on-react" component={NoteList} />
       <div className="credits">
         <h6>Made in React By Axel Cola</h6>
