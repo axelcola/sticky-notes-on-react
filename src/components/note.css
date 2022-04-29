@@ -97,7 +97,11 @@
   border-radius: 50%;
   border-width: 2px;
   border: black;
+  margin: 0;
 }
 .dropdown-menu.show{
+  display: flex !important;
+}
+.dropdown-item{
   display: flex !important;
 }
