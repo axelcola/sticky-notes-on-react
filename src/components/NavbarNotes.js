@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Link } from "wouter";
 import { BiHomeAlt } from "react-icons/bi";
 import { BsTrash } from "react-icons/bs";
 import "./navbar.css";
+import "bootstrap/dist/js/bootstrap.min.js";
 
 const NavbarNotes = (props) => {
   const nNotes = props.number.filter((note) => note.deleted).length;
@@ -45,7 +46,7 @@ const NavbarNotes = (props) => {
               </Link>
             </li>
             <li className="nav-item number-notes">
-              <p>{nNotes}</p>
+              <p className="icons">{nNotes}</p>
             </li>
           </ul>
         </div>
