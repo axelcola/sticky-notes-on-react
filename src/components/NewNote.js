@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "./newNote.css";
 import { v4 as uuidv4 } from "uuid";
-import { BiCommentAdd } from "react-icons/bi";
-import { IoIosColorPalette } from "react-icons/io";
+import { AiOutlinePlusCircle } from "react-icons/ai";
+import { CgColorBucket } from "react-icons/cg";
 import { Dropdown } from "react-bootstrap";
 import { getCurrentDate } from "./getDate";
 
@@ -40,7 +40,7 @@ const NewNote = (props) => {
           id="inputNote"
           onChange={textInput}
           className={`addNote-text-area ${color}`}
-          placeholder="Add a new task.."
+          placeholder="Add a new task..."
           type="text"
         ></textarea>
         <div className="dropdown">
@@ -48,12 +48,12 @@ const NewNote = (props) => {
             <div className="containter-buttons">
               <button className={`button-newnote ${color}`}>
                 {" "}
-                <BiCommentAdd />
+                <AiOutlinePlusCircle />
               </button>
               <div className="button">
                 <Dropdown className={`button ${color}`}>
                   <Dropdown.Toggle variant="none">
-                    <IoIosColorPalette />
+                    <CgColorBucket />
                   </Dropdown.Toggle>
                   <Dropdown.Menu className="dropdown-target">
                     <Dropdown.Item>

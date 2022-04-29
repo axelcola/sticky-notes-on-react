@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import "./note.css";
-import { IoIosColorPalette } from "react-icons/io";
-import { BsFillTrashFill } from "react-icons/bs";
-import { FaTrashRestore } from "react-icons/fa";
+import { CgColorBucket } from "react-icons/cg";
+import { BiTrash } from "react-icons/bi";
+import { MdOutlineRestorePage } from "react-icons/md";
+import { FaCircle } from "react-icons/fa";
 import { Dropdown } from "react-bootstrap";
 
 const Note = ({
@@ -52,14 +53,14 @@ const Note = ({
                   className={`button  ${color} `}
                 >
                   {" "}
-                  <FaTrashRestore className={`button  ${color}`} />
+                  <MdOutlineRestorePage className={`button  ${color}`} />
                 </button>
                 <button
                   onClick={() => deletePerm(id)}
                   className={`button  ${color}`}
                 >
                   {" "}
-                  <BsFillTrashFill />
+                  <BiTrash />
                 </button>
               </>
             ) : (
@@ -69,31 +70,31 @@ const Note = ({
                   className={`button  ${color}`}
                 >
                   {" "}
-                  <BsFillTrashFill />
+                  <BiTrash />
                 </button>
 
                 <Dropdown className={`button  ${color}`}>
                   <Dropdown.Toggle variant="none">
-                    <IoIosColorPalette />
+                    <CgColorBucket />
                   </Dropdown.Toggle>
 
                   <Dropdown.Menu className="dropdown-target">
                     <Dropdown.Item>
-                      <div
+                      <FaCircle
                         onClick={changeColor}
                         id="green"
                         className="squere green"
                       />
                     </Dropdown.Item>
                     <Dropdown.Item>
-                      <div
+                      <FaCircle
                         className="squere yellow"
                         onClick={changeColor}
                         id="yellow"
                       />
                     </Dropdown.Item>
                     <Dropdown.Item>
-                      <div
+                      <FaCircle
                         className="squere red"
                         onClick={changeColor}
                         id="red"

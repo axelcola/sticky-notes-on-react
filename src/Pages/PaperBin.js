@@ -3,40 +3,40 @@ import NavbarNotes from "../components/NavbarNotes";
 import Note from "../components/Note";
 
 const PaperBin = () => {
-  const [tasks, setTasks] = useState([]);
+  const [delTasks, setDelTasks] = useState([]);
 
   useEffect(() => {
     const savedTasks = JSON.parse(localStorage.getItem("notes"));
     const delNotes = savedTasks.filter((task) => task.deleted);
-    if (delNotes) setTasks(delNotes);
+    if (delNotes) setDelTasks(delNotes);
   }, []);
 
   const restoreNote = (id) => {
-    const restoredNotes = tasks.map((task) => {
+    const restoredNotes = delTasks.map((task) => {
       if (task.id === id) {
         task.deleted = !task.deleted;
       }
       return task;
     });
-    setTasks(restoredNotes);
+    setDelTasks(restoredNotes);
     window.localStorage.setItem("notes", JSON.stringify(restoredNotes));
   };
   const deletePerm = (id) => {
     if (
       window.confirm("Are you sure you want to delete this note permanently?")
     ) {
-      let newNotesArray = tasks.filter((note) => note.id !== id);
-      setTasks(newNotesArray);
+      let newNotesArray = delTasks.filter((note) => note.id !== id);
+      setDelTasks(newNotesArray);
       window.localStorage.setItem("notes", JSON.stringify(newNotesArray));
     }
   };
 
   return (
     <>
-      <NavbarNotes number={tasks} />
+      <NavbarNotes number={delTasks} />
       <div className="container">
         <div className=" notelist">
-          {tasks.map((task) => (
+          {delTasks.map((task) => (
             <Note
               key={task.id}
               id={task.id}

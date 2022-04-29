@@ -1,10 +1,10 @@
 
 .newNote {
-  background-color: #67d7cc !important;
+  background-color: #a7ffeb !important;
 }
 .addNote-text-area {
   border: none;
-  background-color: #67d7cc !important;
+  background-color: #a7ffeb !important;
   height: 100px;
   width: auto;
   resize: none;
@@ -19,7 +19,7 @@
   outline: none;
 }  
 .button-newnote {
-  background-color:#67d7cc !important;
+  background-color:#a7ffeb !important;
   box-shadow: none;
   border: none;
   align-items: flex-end;
@@ -39,14 +39,14 @@
   margin-right: 30px;
 }
 .button.newNote {
-  background-color:#67d7cc !important;
+  background-color:#a7ffeb !important;
   box-shadow: none;
   border: none;
   align-items: flex-end;
 }
 .circle{
   margin-right: 1em;
-  background-color: #67d7cc !important;
+  background-color: #a7ffeb !important;
 }
 .drop-items{
   display: flex;
