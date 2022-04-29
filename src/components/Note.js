@@ -73,28 +73,28 @@ const Note = ({
                   <BiTrash />
                 </button>
 
-                <Dropdown className={`button  ${color}`}>
+                <Dropdown className={`button  ${color} dropdown `}>
                   <Dropdown.Toggle variant="none">
                     <CgColorBucket />
                   </Dropdown.Toggle>
 
-                  <Dropdown.Menu className="dropdown-target">
+                  <Dropdown.Menu className="dropdown-target dropdown">
                     <Dropdown.Item>
-                      <FaCircle
+                      <div
                         onClick={changeColor}
                         id="green"
                         className="squere green"
                       />
                     </Dropdown.Item>
                     <Dropdown.Item>
-                      <FaCircle
+                      <div
                         className="squere yellow"
                         onClick={changeColor}
                         id="yellow"
                       />
                     </Dropdown.Item>
                     <Dropdown.Item>
-                      <FaCircle
+                      <div
                         className="squere red"
                         onClick={changeColor}
                         id="red"
