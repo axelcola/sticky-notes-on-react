@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./newNote.css";
 import { v4 as uuidv4 } from "uuid";
 import { AiOutlinePlusCircle } from "react-icons/ai";
@@ -14,8 +14,6 @@ const NewNote = (props) => {
   };
 
   const textSubmit = (e) => {
-    e.preventDefault();
-
     const newTask = {
       id: uuidv4(),
       text: input,
@@ -26,14 +24,33 @@ const NewNote = (props) => {
     props.onSubmit(newTask);
     document.getElementById("inputNote").value = "";
     setColor("newNote");
+    setInput("");
+  };
+  const sendPrevent = (e) => {
+    e.preventDefault();
+
+    textSubmit();
   };
 
   const changeColor = (e) => {
     setColor(e.target.id);
   };
+  useEffect(() => {
+    const listener = (e) => {
+      if (e.keyCode === 17 && e.keyCode === 13) {
+        console.log("Enter key was pressed. Run your function.");
+        e.preventDefault();
+        textSubmit();
+      }
+    };
+    document.addEventListener("keydown", listener);
+    return () => {
+      document.removeEventListener("keydown", listener);
+    };
+  });
 
   return (
-    <form onSubmit={textSubmit}>
+    <form>
       <div className={`note ${color}`}>
         <textarea
           id="inputNote"
@@ -45,7 +62,10 @@ const NewNote = (props) => {
         <div className="dropdown">
           <div className="note-content">
             <div className="containter-buttons">
-              <button className={`button-newnote ${color}`}>
+              <button
+                onClick={sendPrevent}
+                className={`button-newnote ${color}`}
+              >
                 {" "}
                 <AiOutlinePlusCircle />
               </button>

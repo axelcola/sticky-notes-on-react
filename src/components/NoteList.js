@@ -4,6 +4,7 @@ import NewNote from "./NewNote";
 import Note from "./Note";
 import "./noteList.css";
 import Searcher from "./Searcher";
+import { AiOutlinePlusCircle } from "react-icons/ai";
 
 const NoteList = () => {
   const [tasks, setTasks] = useState([]);
@@ -76,6 +77,9 @@ const NoteList = () => {
           ))}
         </div>
       </div>
+      <button className="new-note-fixed">
+        <AiOutlinePlusCircle size={60} />
+      </button>
     </>
   );
 };

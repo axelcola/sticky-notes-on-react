@@ -6,3 +6,20 @@
     align-items: center;
   }
 
+  .new-note-fixed{
+    background-color: white !important;
+    box-shadow: none;
+    border: none;
+    align-items: flex-end;
+    background-color: transparent !important;
+    position: fixed;
+    font-weight: 500;
+    text-align: right;
+    bottom: 7em;
+    right: 5em;        
+    user-select: none; 
+      
+  }
+  .new-note-button{
+    size: 45px !important;
+  }
