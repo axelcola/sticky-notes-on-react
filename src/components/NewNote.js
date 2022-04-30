@@ -2,9 +2,8 @@ import React, { useState } from "react";
 import "./newNote.css";
 import { v4 as uuidv4 } from "uuid";
 import { AiOutlinePlusCircle } from "react-icons/ai";
-import { CgColorBucket } from "react-icons/cg";
-import { Dropdown } from "react-bootstrap";
 import { getCurrentDate } from "./getDate";
+import ColorDropdown from "./ColorDropdown";
 
 const NewNote = (props) => {
   const [input, setInput] = useState("");
@@ -51,34 +50,7 @@ const NewNote = (props) => {
                 <AiOutlinePlusCircle />
               </button>
               <div className="button">
-                <Dropdown className={`button ${color}`}>
-                  <Dropdown.Toggle variant="none">
-                    <CgColorBucket />
-                  </Dropdown.Toggle>
-                  <Dropdown.Menu className="dropdown-target">
-                    <Dropdown.Item>
-                      <div
-                        onClick={changeColor}
-                        id="green"
-                        className="squere green"
-                      />
-                    </Dropdown.Item>
-                    <Dropdown.Item>
-                      <div
-                        className="squere yellow"
-                        onClick={changeColor}
-                        id="yellow"
-                      />
-                    </Dropdown.Item>
-                    <Dropdown.Item>
-                      <div
-                        className="squere red"
-                        onClick={changeColor}
-                        id="red"
-                      />
-                    </Dropdown.Item>
-                  </Dropdown.Menu>
-                </Dropdown>
+                <ColorDropdown color={color} changeColor={changeColor} />
               </div>
             </div>
           </div>

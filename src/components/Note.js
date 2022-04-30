@@ -1,10 +1,8 @@
 import React from "react";
 import "./note.css";
-import { CgColorBucket } from "react-icons/cg";
 import { BiTrash } from "react-icons/bi";
 import { MdOutlineRestorePage } from "react-icons/md";
-import { FaCircle } from "react-icons/fa";
-import { Dropdown } from "react-bootstrap";
+import ColorDropdown from "./ColorDropdown";
 
 const Note = ({
   text,
@@ -73,35 +71,7 @@ const Note = ({
                   <BiTrash />
                 </button>
 
-                <Dropdown className={`button  ${color} dropdown `}>
-                  <Dropdown.Toggle variant="none">
-                    <CgColorBucket />
-                  </Dropdown.Toggle>
-
-                  <Dropdown.Menu className="dropdown-target dropdown">
-                    <Dropdown.Item>
-                      <div
-                        onClick={changeColor}
-                        id="green"
-                        className="squere green"
-                      />
-                    </Dropdown.Item>
-                    <Dropdown.Item>
-                      <div
-                        className="squere yellow"
-                        onClick={changeColor}
-                        id="yellow"
-                      />
-                    </Dropdown.Item>
-                    <Dropdown.Item>
-                      <div
-                        className="squere red"
-                        onClick={changeColor}
-                        id="red"
-                      />
-                    </Dropdown.Item>
-                  </Dropdown.Menu>
-                </Dropdown>
+                <ColorDropdown color={color} changeColor={changeColor} />
               </>
             )}
             <small className="date">{date}</small>
