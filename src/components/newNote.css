@@ -52,7 +52,6 @@
   display: flex;
 }
 .drops-buttons{
-  box-shadow: none;
   border: none;
   background-color: rgb(128, 128, 128) !important;
   margin-left: 1px;

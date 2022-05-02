@@ -15,7 +15,6 @@ const Note = ({
   color,
   editNote,
 }) => {
-  let currentColor;
   const changeTextNote = (e) => {
     const editProps = {
       id: id,
@@ -25,7 +24,6 @@ const Note = ({
     editNote(editProps);
   };
   const changeColor = (e) => {
-    currentColor = e.target.value;
     const editProps = {
       id: id,
       text: text,
