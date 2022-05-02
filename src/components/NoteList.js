@@ -4,7 +4,6 @@ import NewNote from "./NewNote";
 import Note from "./Note";
 import "./noteList.css";
 import Searcher from "./Searcher";
-import { AiOutlinePlusCircle } from "react-icons/ai";
 
 const NoteList = () => {
   const [tasks, setTasks] = useState([]);
@@ -54,7 +53,6 @@ const NoteList = () => {
     const savedTasks = JSON.parse(localStorage.getItem("notes"));
     if (savedTasks) setTasks(savedTasks);
   }, []);
-
   return (
     <>
       <NavbarNotes number={tasks} />
@@ -77,9 +75,9 @@ const NoteList = () => {
           ))}
         </div>
       </div>
-      <button className="new-note-fixed">
+      {/* <button className="new-note-fixed">
         <AiOutlinePlusCircle size={60} />
-      </button>
+      </button> */}
     </>
   );
 };

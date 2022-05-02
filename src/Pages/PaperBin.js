@@ -40,6 +40,7 @@ const PaperBin = () => {
       window.localStorage.setItem("notes", JSON.stringify(newArrayNotes));
     }
   };
+  console.log(delTasks);
 
   return (
     <>
@@ -61,9 +62,15 @@ const PaperBin = () => {
           ))}
         </div>
       </div>
-      <button className="new-note-fixed">
-        <BiTrash size={60} onClick={deleteAllNotes} />
-      </button>
+      {delTasks.length ? (
+        <>
+          <button className="new-note-fixed">
+            <BiTrash size={60} onClick={deleteAllNotes} />
+          </button>
+        </>
+      ) : (
+        <></>
+      )}
     </>
   );
 };

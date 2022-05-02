@@ -14,12 +14,19 @@ export default function ColorDropdown(props) {
           <Dropdown.Item
             className="drop-item"
             onClick={props.changeColor}
-            id="green"
+            id="red"
+          >
+            <div className="circle red" onClick={props.changeColor} id="red" />
+          </Dropdown.Item>
+          <Dropdown.Item
+            className="drop-item"
+            onClick={props.changeColor}
+            id="orange"
           >
             <div
-              className="squere green"
+              className="circle orange"
               onClick={props.changeColor}
-              id="green"
+              id="orange"
             />
           </Dropdown.Item>
           <Dropdown.Item
@@ -28,7 +35,7 @@ export default function ColorDropdown(props) {
             id="yellow"
           >
             <div
-              className="squere yellow"
+              className="circle yellow"
               onClick={props.changeColor}
               id="yellow"
             />
@@ -36,9 +43,90 @@ export default function ColorDropdown(props) {
           <Dropdown.Item
             className="drop-item"
             onClick={props.changeColor}
-            id="red"
+            id="green"
           >
-            <div className="squere red" onClick={props.changeColor} id="red" />
+            <div
+              className="circle green"
+              onClick={props.changeColor}
+              id="green"
+            />
+          </Dropdown.Item>
+          <Dropdown.Item
+            className="drop-item"
+            onClick={props.changeColor}
+            id="turquoise"
+          >
+            <div
+              className="circle turquoise"
+              onClick={props.changeColor}
+              id="turquoise"
+            />
+          </Dropdown.Item>
+          <Dropdown.Item
+            className="drop-item"
+            onClick={props.changeColor}
+            id="blue"
+          >
+            <div
+              className="circle blue"
+              onClick={props.changeColor}
+              id="blue"
+            />
+          </Dropdown.Item>
+          <Dropdown.Item
+            className="drop-item"
+            onClick={props.changeColor}
+            id="dark-blue"
+          >
+            <div
+              className="circle dark-blue"
+              onClick={props.changeColor}
+              id="dark-blue"
+            />
+          </Dropdown.Item>
+          <Dropdown.Item
+            className="drop-item"
+            onClick={props.changeColor}
+            id="violet"
+          >
+            <div
+              className="circle violet"
+              onClick={props.changeColor}
+              id="violet"
+            />
+          </Dropdown.Item>
+          <Dropdown.Item
+            className="drop-item"
+            onClick={props.changeColor}
+            id="pink"
+          >
+            <div
+              className="circle pink"
+              onClick={props.changeColor}
+              id="pink"
+            />
+          </Dropdown.Item>
+          <Dropdown.Item
+            className="drop-item"
+            onClick={props.changeColor}
+            id="brown"
+          >
+            <div
+              className="circle brown"
+              onClick={props.changeColor}
+              id="brown"
+            />
+          </Dropdown.Item>
+          <Dropdown.Item
+            className="drop-item last-item"
+            onClick={props.changeColor}
+            id="grey"
+          >
+            <div
+              className="circle grey"
+              onClick={props.changeColor}
+              id="grey"
+            />
           </Dropdown.Item>
         </Dropdown.Menu>
       </Dropdown>

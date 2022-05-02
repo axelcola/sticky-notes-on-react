@@ -16,11 +16,11 @@ const Note = ({
   editNote,
 }) => {
   let currentColor;
-  const changeNote = (e) => {
+  const changeTextNote = (e) => {
     const editProps = {
       id: id,
       text: e.target.value,
-      color: currentColor,
+      color: color,
     };
     editNote(editProps);
   };
@@ -39,7 +39,7 @@ const Note = ({
       <textarea
         className={`note-text-area  ${color}`}
         defaultValue={text}
-        onChange={changeNote}
+        onChange={changeTextNote}
       />
       <div className="note-content">
         <div className="note-content">

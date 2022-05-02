@@ -7,7 +7,7 @@ import ColorDropdown from "./ColorDropdown";
 
 const NewNote = (props) => {
   const [input, setInput] = useState("");
-  const [color, setColor] = useState("newNote");
+  const [color, setColor] = useState("turquoise");
 
   const textInput = (e) => {
     setInput(e.target.value);
@@ -23,7 +23,7 @@ const NewNote = (props) => {
     };
     props.onSubmit(newTask);
     document.getElementById("inputNote").value = "";
-    setColor("newNote");
+    setColor("turquoise");
     setInput("");
   };
   const sendPrevent = (e) => {
