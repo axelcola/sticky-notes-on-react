@@ -38,9 +38,7 @@
     transform: rotate(360deg);
   }
 }
-.searcher{
-  margin-top: 20px;
-}
+
 .credits{
   position: fixed;
   opacity: 70%;

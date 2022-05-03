@@ -4,18 +4,19 @@ import { BiHomeAlt } from "react-icons/bi";
 import { BsTrash } from "react-icons/bs";
 import "./navbar.css";
 import "bootstrap/dist/js/bootstrap.min.js";
+import Searcher from "./Searcher";
 
 const NavbarNotes = (props) => {
   const nNotes = props.number.filter((note) => note.deleted).length;
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark mb-5">
+    <nav className="navbar navbar-expand-lg navbar-ligth bg-ligth mb-5">
       <div className="container-fluid">
-        <Link className="navbar-brand" to="/sticky-notes-on-react">
+        <Link className="navbar-brand home" to="/sticky-notes-on-react">
           Sticky Notes
         </Link>
         <button
-          className="navbar-toggler"
+          className="navbar-toggler "
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarSupportedContent"
@@ -49,6 +50,10 @@ const NavbarNotes = (props) => {
               <p className="icons">{nNotes}</p>
             </li>
           </ul>
+          <div className="searcher">
+            <Searcher searcher={props.searcher} />
+          </div>
+          <div className="white"></div>
         </div>
       </div>
     </nav>

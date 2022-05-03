@@ -1,7 +1,32 @@
 p{
-    color: white;
-    margin-bottom: -20px;
+    color: #5f6368;
+    margin: auto;
+    margin-top: 18px !important;
+
+}
+.home {
+    color: #393d42 !important;
 }
 .number-notes{
-    margin-bottom: -15px;
+    margin: auto;
+}
+.navbar{
+  box-shadow: 0px 5px 20px -10px rgba(0, 0, 0, 0.5); 
+  max-height: 55px !important;
+
+}
+.searcher{
+    margin: auto;
+    margin-top: 15px;
+    margin-left: -50px;
+     -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    width: 70%;
+
+}
+.nav-item{
+    margin:auto;
+    align-items: center;
 }
