@@ -11,10 +11,10 @@ const NewNote = (props) => {
 
   const textInput = (e) => {
     setInput(e.target.value);
+    props.newNote(e.target.value, color);
   };
 
   const textSubmit = (e) => {
-    console.log(input);
     const newTask = {
       id: uuidv4(),
       text: input,
