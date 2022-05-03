@@ -74,7 +74,9 @@ const PaperBin = () => {
           </button>
         </>
       ) : (
-        <></>
+        <>
+          <h1>Deleted notes will appear here.</h1>
+        </>
       )}
     </>
   );
