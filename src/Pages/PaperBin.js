@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import NavbarNotes from "../components/NavbarNotes";
 import Note from "../components/Note";
 import { BiTrash } from "react-icons/bi";
+import "./paperBin.css";
 
 const PaperBin = () => {
   const [tasks, setTasks] = useState([]);
@@ -65,7 +66,7 @@ const PaperBin = () => {
       {delTasks.length ? (
         <>
           <button className="new-note-fixed">
-            <BiTrash size={60} onClick={deleteAllNotes} />
+            <BiTrash className="trash-icon" onClick={deleteAllNotes} />
           </button>
         </>
       ) : (

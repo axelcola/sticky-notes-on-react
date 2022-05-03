@@ -37,8 +37,7 @@ const NewNote = (props) => {
   };
   useEffect(() => {
     const listener = (e) => {
-      if (e.keyCode === 17 && e.keyCode === 13) {
-        console.log("Enter key was pressed. Run your function.");
+      if (e.keyCode === 13 && e.ctrlKey) {
         e.preventDefault();
         textSubmit();
       }

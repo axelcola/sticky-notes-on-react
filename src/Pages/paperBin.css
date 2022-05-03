@@ -1,0 +1,6 @@
+.trash-icon{
+    min-width:60px; /* or whatever width you want. */
+    max-width:60px; /* or whatever width you want. */
+    display: inline-block;
+    font-size: 60px; 
+}

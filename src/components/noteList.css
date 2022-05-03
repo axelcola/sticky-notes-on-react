@@ -18,8 +18,9 @@
     bottom: 7em;
     right: 5em;        
     user-select: none; 
-      
-  }
+    max-width: 60px;
+    min-width: 60px  }
+    
   .new-note-button{
     size: 45px !important;
   }
