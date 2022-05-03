@@ -4,7 +4,6 @@ import NewNote from "./NewNote";
 import Note from "./Note";
 import { AiOutlinePlusCircle } from "react-icons/ai";
 import "./noteList.css";
-import Searcher from "./Searcher";
 
 const NoteList = () => {
   const [tasks, setTasks] = useState([]);
@@ -56,7 +55,6 @@ const NoteList = () => {
     <>
       <NavbarNotes number={tasks} searcher={searcherInfo} />
       <div className="container">
-        {/* <Searcher searcher={searcherInfo} /> */}
         <div className=" notelist">
           <NewNote onSubmit={addTask} />
           {tasks.map((task) => (
