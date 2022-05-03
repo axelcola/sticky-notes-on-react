@@ -25,7 +25,7 @@ const NoteList = () => {
       text: input,
       deleted: false,
       date: getCurrentDate(),
-      color: color,
+      color: "yellow",
       placeholder: "Empty Note",
     };
     addTask(newTask);
@@ -100,15 +100,10 @@ const NoteList = () => {
           ))}
         </div>
       </div>
-      {tasks.length ? (
-        <>
-          <button className="new-note-fixed" onClick={noteSubmit}>
-            <AiOutlinePlusCircle size={40} />
-          </button>
-        </>
-      ) : (
-        <></>
-      )}
+
+      <button className="new-note-fixed" onClick={noteSubmit}>
+        <AiOutlinePlusCircle size={40} />
+      </button>
     </>
   );
 };
