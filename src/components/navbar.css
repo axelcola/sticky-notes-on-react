@@ -26,7 +26,20 @@ p{
     width: 70%;
 
 }
+@media (max-width: 999px){
+    .searcher{
+        margin: auto;
+    }
+    
+}
 .nav-item{
     margin:auto;
     align-items: center;
+}
+.navbar .navbar-toggler .icon-bar {
+    background: black !important;
+}
+.toggler-icon{
+    color: #393d42 !important;
+    background-color: #393d42 !important;
 }

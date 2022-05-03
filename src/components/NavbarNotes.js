@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "wouter";
 import { BiHomeAlt } from "react-icons/bi";
 import { BsTrash } from "react-icons/bs";
+import { GiHamburgerMenu } from "react-icons/gi";
 import "./navbar.css";
 import "bootstrap/dist/js/bootstrap.min.js";
 import Searcher from "./Searcher";
@@ -16,7 +17,7 @@ const NavbarNotes = (props) => {
           Sticky Notes
         </Link>
         <button
-          className="navbar-toggler "
+          className="navbar-toggler bg-ligth "
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarSupportedContent"
@@ -24,7 +25,10 @@ const NavbarNotes = (props) => {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span className="navbar-toggler-icon"></span>
+          <span>
+            {" "}
+            <GiHamburgerMenu size={30} />
+          </span>
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
@@ -50,7 +54,7 @@ const NavbarNotes = (props) => {
               <p className="icons">{nNotes}</p>
             </li>
           </ul>
-          <div className="searcher">
+          <div className="searcher ml-auto">
             <Searcher searcher={props.searcher} />
           </div>
           <div className="white"></div>
