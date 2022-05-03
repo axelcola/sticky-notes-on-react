@@ -66,7 +66,11 @@ const PaperBin = () => {
       {delTasks.length ? (
         <>
           <button className="new-note-fixed">
-            <BiTrash className="trash-icon" onClick={deleteAllNotes} />
+            <BiTrash
+              className="trash-icon"
+              size={60}
+              onClick={deleteAllNotes}
+            />
           </button>
         </>
       ) : (

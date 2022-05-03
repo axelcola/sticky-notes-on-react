@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import NavbarNotes from "./NavbarNotes";
 import NewNote from "./NewNote";
 import Note from "./Note";
+import { AiOutlinePlusCircle } from "react-icons/ai";
 import "./noteList.css";
 import Searcher from "./Searcher";
 
@@ -75,9 +76,9 @@ const NoteList = () => {
           ))}
         </div>
       </div>
-      {/* <button className="new-note-fixed">
-        <AiOutlinePlusCircle size={60} />
-      </button> */}
+      <button className="new-note-fixed">
+        <AiOutlinePlusCircle size={40} />
+      </button>
     </>
   );
 };

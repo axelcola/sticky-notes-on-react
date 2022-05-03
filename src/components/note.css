@@ -115,11 +115,27 @@
   display: flex !important;
 }
 .last-item{
-  margin-right: 8px;
+  margin-right: -5px;
 }
 .dropdown-item:hover{
   background-color: white !important;
 }
 [role="button"]{
   cursor: default !important;
+}
+.selected{
+  border: solid;
+  border-width: 2px;
+  border-color: #a142f4 !important;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  margin-right: -15px;
+  margin-left: -6px;
+  cursor: pointer ;
+}
+.drop-toggler:active{
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
 }
