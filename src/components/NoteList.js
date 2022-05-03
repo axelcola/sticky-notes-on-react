@@ -100,9 +100,15 @@ const NoteList = () => {
           ))}
         </div>
       </div>
-      <button className="new-note-fixed" onClick={noteSubmit}>
-        <AiOutlinePlusCircle size={40} />
-      </button>
+      {tasks.length ? (
+        <>
+          <button className="new-note-fixed" onClick={noteSubmit}>
+            <AiOutlinePlusCircle size={40} />
+          </button>
+        </>
+      ) : (
+        <></>
+      )}
     </>
   );
 };
