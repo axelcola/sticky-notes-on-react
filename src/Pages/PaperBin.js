@@ -41,7 +41,6 @@ const PaperBin = () => {
       window.localStorage.setItem("notes", JSON.stringify(newArrayNotes));
     }
   };
-  console.log(delTasks);
 
   return (
     <>
@@ -59,6 +58,7 @@ const PaperBin = () => {
               deletePerm={deletePerm}
               date={task.date}
               color={task.color}
+              placeholder={task.placeholder}
             />
           ))}
         </div>

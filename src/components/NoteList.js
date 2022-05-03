@@ -10,12 +10,10 @@ const NoteList = () => {
   const [tasks, setTasks] = useState([]);
 
   const addTask = (task) => {
-    if (task.text.trim()) {
-      task.text = task.text.trim();
-      const updtatedTasks = [task, ...tasks];
-      setTasks(updtatedTasks);
-      window.localStorage.setItem("notes", JSON.stringify(updtatedTasks));
-    }
+    task.text = task.text.trim();
+    const updtatedTasks = [task, ...tasks];
+    setTasks(updtatedTasks);
+    window.localStorage.setItem("notes", JSON.stringify(updtatedTasks));
   };
   const searcherInfo = (textsearch) => {
     const savedTasks = JSON.parse(localStorage.getItem("notes"));
@@ -72,6 +70,7 @@ const NoteList = () => {
               className={task.deleted ? "deleted" : ""}
               color={task.color}
               editNote={editNote}
+              placeholder={task.placeholder}
             />
           ))}
         </div>

@@ -1,7 +1,6 @@
 import { Dropdown } from "react-bootstrap";
 
 export default function Color(props) {
-  console.log(props.currentColor);
   return (
     <>
       <Dropdown.Item

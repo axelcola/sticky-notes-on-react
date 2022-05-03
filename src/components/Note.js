@@ -14,6 +14,7 @@ const Note = ({
   className,
   color,
   editNote,
+  placeholder,
 }) => {
   const changeTextNote = (e) => {
     const editProps = {
@@ -38,6 +39,7 @@ const Note = ({
         className={`note-text-area  ${color}`}
         defaultValue={text}
         onChange={changeTextNote}
+        placeholder={placeholder}
       />
       <div className="note-content">
         <div className="note-content">

@@ -14,12 +14,14 @@ const NewNote = (props) => {
   };
 
   const textSubmit = (e) => {
+    console.log(input);
     const newTask = {
       id: uuidv4(),
       text: input,
       deleted: false,
       date: getCurrentDate(),
       color: color,
+      placeholder: "Empty Note",
     };
     props.onSubmit(newTask);
     document.getElementById("inputNote").value = "";
