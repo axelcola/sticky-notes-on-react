@@ -1,9 +1,5 @@
 <h1>Sticky Notes App with React JS</h1>
-<<<<<<< HEAD
-=======
-
-> > > > > > > 841f385d3da82a46ced6d0780b4d661c4e55aa07
-> > > > > > > Check out the final result [here](https://axelcola.github.io/sticky-notes-on-react/)
+Check out the final result [here](https://axelcola.github.io/sticky-notes-on-react/)
 
 I worked on this page to put into practice my knowledge of Html, Css, Javascript and bootstrap.
 

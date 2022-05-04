@@ -11,7 +11,7 @@ const NewNote = (props) => {
 
   const textInput = (e) => {
     setInput(e.target.value);
-    props.newNote(e.target.value, color);
+    // props.newNote(e.target.value, color);
   };
 
   const textSubmit = (e) => {
@@ -21,7 +21,7 @@ const NewNote = (props) => {
       deleted: false,
       date: getCurrentDate(),
       color: color,
-      placeholder: "Empty Note",
+      placeholder: "Add a new task...",
     };
     props.onSubmit(newTask);
     document.getElementById("inputNote").value = "";

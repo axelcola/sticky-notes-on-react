@@ -1,17 +1,18 @@
+
 p{
     color: #5f6368;
     margin: auto;
-    margin-top: 18px !important;
-
 }
 .home {
     color: #393d42 !important;
+    margin-left: 2.5em;
 }
 .number-notes{
     margin: auto;
+    margin-bottom: -18px !important;
 }
 .navbar{
-  box-shadow: 0px 5px 20px -10px rgba(0, 0, 0, 0.5); 
+  box-shadow: 0px 1.5px 1px #dfe0e4; 
   max-height: 55px !important;
 
 }
@@ -43,3 +44,39 @@ p{
     color: #393d42 !important;
     background-color: #393d42 !important;
 }
+textarea:hover, 
+input:hover, 
+textarea:active, 
+input:active, 
+textarea:focus, 
+input:focus,
+button:focus,
+button:active,
+button:hover,
+label:focus,
+.btn:active,
+.btn.active
+{
+    outline:0px !important;
+    -webkit-appearance:none;
+    box-shadow: none !important;
+    border-color: #dfe0e4;
+}
+.custom-control-input~.custom-control-indicator{
+    background-color: grey !important;
+}
+
+.custom-control-input:focus~.custom-control-indicator{
+    box-shadow: none !important; 
+}
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }
+
+.custom-control-input:active~.custom-control-indicator{color:#fff;background-color:#ababab !important}
+.custom-select {
+    border: none;
+    margin-right: 10px;
+    background-color: transparent;
+  }

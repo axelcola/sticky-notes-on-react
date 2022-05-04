@@ -44,7 +44,7 @@ const PaperBin = () => {
 
   return (
     <>
-      <NavbarNotes number={delTasks} />
+      <NavbarNotes number={delTasks} paperbin={true} />
       <div className="container">
         <div className=" notelist">
           {delTasks.map((task) => (
@@ -75,7 +75,9 @@ const PaperBin = () => {
         </>
       ) : (
         <>
-          <h1>Deleted notes will appear here.</h1>
+          <div className="title-container">
+            <h4>Deleted notes will appear here.</h4>
+          </div>
         </>
       )}
     </>

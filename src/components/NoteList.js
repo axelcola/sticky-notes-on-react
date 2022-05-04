@@ -2,39 +2,11 @@ import React, { useEffect, useState } from "react";
 import NavbarNotes from "./NavbarNotes";
 import NewNote from "./NewNote";
 import Note from "./Note";
-import { AiOutlinePlusCircle } from "react-icons/ai";
-import { v4 as uuidv4 } from "uuid";
 import "./noteList.css";
-import { getCurrentDate } from "./getDate";
 
 const NoteList = () => {
   const [tasks, setTasks] = useState([]);
-  // ..........................................................
-  // Function to add a note with the fixed button in de screen
-  const [input, setInput] = useState("");
-  const [color, setColor] = useState("turquoise");
 
-  const newNoteData = (text, colorProps) => {
-    setInput(text);
-    setColor(colorProps);
-    console.log(input, color, text, colorProps);
-  };
-  const noteSubmit = () => {
-    const newTask = {
-      id: uuidv4(),
-      text: input,
-      deleted: false,
-      date: getCurrentDate(),
-      color: "yellow",
-      placeholder: "Empty Note",
-    };
-    addTask(newTask);
-    document.getElementById("inputNote").value = "";
-    setColor("turquoise");
-    setInput("");
-  };
-  // ............................................................
-  // ............................................................
   const addTask = (task) => {
     task.text = task.text.trim();
     const updtatedTasks = [task, ...tasks];
@@ -80,10 +52,10 @@ const NoteList = () => {
   }, []);
   return (
     <>
-      <NavbarNotes number={tasks} searcher={searcherInfo} />
+      <NavbarNotes number={tasks} searcher={searcherInfo} paperbin={false} />
       <div className="container">
         <div className=" notelist">
-          <NewNote onSubmit={addTask} newNoteData={newNoteData} />
+          <NewNote onSubmit={addTask} />
           {tasks.map((task) => (
             <Note
               key={task.id}
@@ -100,12 +72,37 @@ const NoteList = () => {
           ))}
         </div>
       </div>
-
-      <button className="new-note-fixed" onClick={noteSubmit}>
-        <AiOutlinePlusCircle size={40} />
-      </button>
     </>
   );
 };
 
 export default NoteList;
+
+// ............................................................
+// Function to add a note with the button fixed in the screen
+// const [input, setInput] = useState("");
+// const [color, setColor] = useState("turquoise");
+
+// const newNoteData = (text, colorProps) => {
+//   setInput(text);
+//   setColor(colorProps);
+//   console.log(input, color, text, colorProps);
+// };
+// const noteSubmit = () => {
+//   const newTask = {
+//     id: uuidv4(),
+//     text: input,
+//     deleted: false,
+//     date: getCurrentDate(),
+//     color: "yellow",
+//     placeholder: "Empty Note",
+//   };
+//   addTask(newTask);
+//   document.getElementById("inputNote").value = "";
+//   setColor("turquoise");
+//   setInput("");
+// };
+// ............................................................
+/* <button className="new-note-fixed" onClick={noteSubmit}>
+  <AiOutlinePlusCircle size={40} />
+</button> */

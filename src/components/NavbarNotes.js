@@ -1,11 +1,12 @@
 import React from "react";
 import { Link } from "wouter";
-import { BiHomeAlt } from "react-icons/bi";
-import { BsTrash } from "react-icons/bs";
+import { AiOutlineHome, AiFillHome } from "react-icons/ai";
+import { BsTrash, BsTrashFill } from "react-icons/bs";
 import { GiHamburgerMenu } from "react-icons/gi";
 import "./navbar.css";
 import "bootstrap/dist/js/bootstrap.min.js";
 import Searcher from "./Searcher";
+import PaperBin from "../Pages/PaperBin";
 
 const NavbarNotes = (props) => {
   const nNotes = props.number.filter((note) => note.deleted).length;
@@ -38,7 +39,11 @@ const NavbarNotes = (props) => {
                 aria-current="page"
                 to="/sticky-notes-on-react"
               >
-                <BiHomeAlt className="icons" />
+                {props.paperbin ? (
+                  <AiOutlineHome className="icons" />
+                ) : (
+                  <AiFillHome className="icons" />
+                )}
               </Link>
             </li>
             <li className="nav-item">
@@ -47,7 +52,11 @@ const NavbarNotes = (props) => {
                 aria-current="page"
                 to="/sticky-notes-on-react/paper-bin"
               >
-                <BsTrash className="icons" />
+                {props.paperbin ? (
+                  <BsTrashFill className="icons" />
+                ) : (
+                  <BsTrash className="icons" />
+                )}
               </Link>
             </li>
             <li className="nav-item number-notes">

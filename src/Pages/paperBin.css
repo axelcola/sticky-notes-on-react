@@ -3,6 +3,11 @@
     max-width:40px !important; /* or whatever width you want. */
     display: inline-block !important;
 }
-h1{
+h6{
     text-align: center;
+    
+}
+.title-container{
+    justify-content: center;
+    align-items: center;
 }
