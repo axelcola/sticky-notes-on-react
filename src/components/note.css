@@ -55,7 +55,6 @@
 .note-text-area {
   border: none;
   width: auto;
-  resize: none;
   min-height: 100px;
   background-color: #fff475;
 }
@@ -138,4 +137,15 @@
   outline: none !important;
   box-shadow: none !important;
   border: none !important;
+}
+
+.title-text-area {
+  border: none;
+  background-color: #a7ffeb ;
+  height: 30px;
+  overflow: hidden;
+  width: auto;
+  resize: none;
+  font-size: larger;
+  margin-bottom: 10px;
 }

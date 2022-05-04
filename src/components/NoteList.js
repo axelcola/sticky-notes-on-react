@@ -68,6 +68,7 @@ const NoteList = () => {
               color={task.color}
               editNote={editNote}
               placeholder={task.placeholder}
+              title={task.title}
             />
           ))}
         </div>

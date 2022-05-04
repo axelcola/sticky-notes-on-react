@@ -15,6 +15,7 @@ const Note = ({
   color,
   editNote,
   placeholder,
+  title,
 }) => {
   const changeTextNote = (e) => {
     const editProps = {
@@ -32,14 +33,23 @@ const Note = ({
     };
     editNote(editProps);
   };
-
+  console.log(title);
   return (
     <div className={`note ${color} ${className}`}>
+      {title !== "" ? (
+        <textarea
+          className={`title-text-area  ${color}`}
+          defaultValue={title}
+          placeholder="Title"
+        />
+      ) : (
+        <></>
+      )}
       <textarea
         className={`note-text-area  ${color}`}
         defaultValue={text}
         onChange={changeTextNote}
-        placeholder={placeholder}
+        placeholder="Add a new task..."
       />
       <div className="note-content">
         <div className="note-content">

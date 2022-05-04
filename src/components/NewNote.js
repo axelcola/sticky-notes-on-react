@@ -7,10 +7,15 @@ import ColorDropdown from "./ColorDropdown";
 
 const NewNote = (props) => {
   const [input, setInput] = useState("");
+  const [title, setTitle] = useState("");
   const [color, setColor] = useState("turquoise");
 
   const textInput = (e) => {
     setInput(e.target.value);
+    // props.newNote(e.target.value, color);
+  };
+  const titleInput = (e) => {
+    setTitle(e.target.value);
     // props.newNote(e.target.value, color);
   };
 
@@ -18,6 +23,7 @@ const NewNote = (props) => {
     const newTask = {
       id: uuidv4(),
       text: input,
+      title: title,
       deleted: false,
       date: getCurrentDate(),
       color: color,
@@ -53,6 +59,13 @@ const NewNote = (props) => {
   return (
     <form>
       <div className={`note ${color}`}>
+        <textarea
+          id="inputNote"
+          onChange={titleInput}
+          className={`title-text-area ${color}`}
+          placeholder="Title."
+          type="text"
+        ></textarea>
         <textarea
           id="inputNote"
           onChange={textInput}

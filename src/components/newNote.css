@@ -2,13 +2,6 @@
 .newNote {
   background-color: #a7ffeb !important;
 }
-.addNote-text-area {
-  border: none;
-  background-color: #a7ffeb !important;
-  height: 100px;
-  width: auto;
-  resize: none;
-}
 
 .addNote-text-area:focus {
   outline: none;
@@ -56,4 +49,21 @@
   background-color: rgb(128, 128, 128) !important;
   margin-left: 1px;
 
+}
+.addNote-text-area {
+  border: none;
+  background-color: #a7ffeb ;
+  height: 100px;
+  width: auto;
+  resize: none;
+}
+.title-text-area {
+  border: none;
+  background-color: #a7ffeb ;
+  height: 30px;
+  overflow: hidden;
+  width: auto;
+  resize: none;
+  font-size: larger;
+  margin-bottom: 10px;
 }

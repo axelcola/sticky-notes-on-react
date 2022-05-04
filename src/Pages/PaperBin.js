@@ -58,7 +58,7 @@ const PaperBin = () => {
               deletePerm={deletePerm}
               date={task.date}
               color={task.color}
-              placeholder={task.placeholder}
+              title={task.title}
             />
           ))}
         </div>

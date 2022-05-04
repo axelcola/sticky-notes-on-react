@@ -1,4 +1,6 @@
 import React from "react";
+import "./searcher.css";
+import { AiOutlineSearch } from "react-icons/ai";
 
 const Searcher = (props) => {
   const sendInfo = (e) => {
@@ -7,13 +9,16 @@ const Searcher = (props) => {
   };
   return (
     <>
-      <input
-        type="search"
-        className="form-control mb-3"
-        placeholder="Search"
-        id="searcher"
-        onChange={sendInfo}
-      />
+      <div className="searcher-box mb-3">
+        <AiOutlineSearch className="search-icon" />
+        <input
+          type="text"
+          className="my-searcher"
+          placeholder="Search"
+          id="searcher"
+          onChange={sendInfo}
+        />
+      </div>
     </>
   );
 };

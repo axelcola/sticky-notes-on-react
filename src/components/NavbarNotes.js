@@ -6,7 +6,6 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import "./navbar.css";
 import "bootstrap/dist/js/bootstrap.min.js";
 import Searcher from "./Searcher";
-import PaperBin from "../Pages/PaperBin";
 
 const NavbarNotes = (props) => {
   const nNotes = props.number.filter((note) => note.deleted).length;
@@ -63,9 +62,13 @@ const NavbarNotes = (props) => {
               <p className="icons">{nNotes}</p>
             </li>
           </ul>
-          <div className="searcher ml-auto">
-            <Searcher searcher={props.searcher} />
-          </div>
+          {props.paperbin ? (
+            <></>
+          ) : (
+            <div className="searcher ml-auto">
+              <Searcher searcher={props.searcher} />
+            </div>
+          )}
           <div className="white"></div>
         </div>
       </div>
