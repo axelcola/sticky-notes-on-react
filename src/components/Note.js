@@ -36,15 +36,12 @@ const Note = ({
   console.log(title);
   return (
     <div className={`note ${color} ${className}`}>
-      {title !== "" ? (
-        <textarea
-          className={`title-text-area  ${color}`}
-          defaultValue={title}
-          placeholder="Title"
-        />
-      ) : (
-        <></>
-      )}
+      <textarea
+        className={`title-text-area  ${color}`}
+        defaultValue={title}
+        placeholder="Title"
+      />
+
       <textarea
         className={`note-text-area  ${color}`}
         defaultValue={text}
