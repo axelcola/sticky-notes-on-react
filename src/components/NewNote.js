@@ -33,6 +33,7 @@ const NewNote = (props) => {
     document.getElementById("inputNote").value = "";
     setColor("turquoise");
     setInput("");
+    setTitle("");
   };
   const sendPrevent = (e) => {
     e.preventDefault();
