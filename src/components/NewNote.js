@@ -25,12 +25,6 @@ const NewNote = (props) => {
       document.removeEventListener("keydown", listener);
     };
   });
-  useEffect(() => {
-    document.addEventListener("mousedown", () => {
-      console.log("hola");
-    });
-  }, []);
-
   const textInput = (e) => {
     setInput(e.target.value);
     // props.newNote(e.target.value, color);
@@ -76,7 +70,7 @@ const NewNote = (props) => {
   return (
     <form>
       <OutsideClickHandler onOutsideClick={outsideSend}>
-        <div id="inputNote" className={`newNote ${templateColor} `}>
+        <div className={`newNote ${templateColor} `}>
           <TextareaAutosize
             id="inputNote"
             onChange={titleInput}
