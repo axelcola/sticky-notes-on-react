@@ -8,7 +8,7 @@ export default function ColorDropdown(props) {
     <>
       <Dropdown className={`  ${props.color} dropdown `}>
         <Dropdown.Toggle variant="none" className="drop-toggler">
-          <CgColorBucket />
+          <CgColorBucket size={20} />
         </Dropdown.Toggle>
 
         <Dropdown.Menu className="dropdown-target dropdown">

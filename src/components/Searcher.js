@@ -10,7 +10,7 @@ const Searcher = (props) => {
   return (
     <>
       <div className="searcher-box mb-3">
-        <AiOutlineSearch className="search-icon" />
+        <AiOutlineSearch size={20} className="search-icon" />
         <input
           type="text"
           className="my-searcher"

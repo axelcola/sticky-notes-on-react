@@ -58,14 +58,17 @@ const Note = ({
                 className={`button  ${color} `}
               >
                 {" "}
-                <MdOutlineRestorePage className={`button  ${color}`} />
+                <MdOutlineRestorePage
+                  size={20}
+                  className={`button  ${color}`}
+                />
               </button>
               <button
                 onClick={() => deletePerm(id)}
                 className={`button  ${color}`}
               >
                 {" "}
-                <BiTrash />
+                <BiTrash size={20} />
               </button>
             </>
           ) : (
@@ -75,7 +78,7 @@ const Note = ({
                 className={`button  ${color}`}
               >
                 {" "}
-                <BiTrash />
+                <BiTrash size={20} />
               </button>
 
               <ColorDropdown color={color} changeColor={changeColor} />

@@ -6,8 +6,8 @@
     border-color: #494d51;
     padding: 5px;
     border-radius: 10px;
-    color: #494d51;
-    background-color: #ffffff;
+    color: #f1f3f4;
+    background-color: #ebebeb;
       
       
 }
@@ -22,9 +22,10 @@
 .my-searcher{
     width: 80%;
     border: none;
-    margin: auto;
 }
 .search-icon{
     margin-right: 20px !important;
     margin-left: -120px;
+    margin-top: -3px;
+    
 }

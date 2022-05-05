@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./newNote.css";
 import { v4 as uuidv4 } from "uuid";
-import { AiOutlinePlusCircle } from "react-icons/ai";
+import { AiOutlineSave } from "react-icons/ai";
 import { getCurrentDate } from "./getDate";
 import ColorDropdown from "./ColorDropdown";
 import TextareaAutosize from "@mui/base/TextareaAutosize";
@@ -87,7 +87,7 @@ const NewNote = (props) => {
                 className={`button-newnote ${templateColor}`}
               >
                 {" "}
-                <AiOutlinePlusCircle />
+                <AiOutlineSave size={20} />
               </button>
               <div>
                 <ColorDropdown
