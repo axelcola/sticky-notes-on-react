@@ -4,11 +4,25 @@ import { v4 as uuidv4 } from "uuid";
 import { AiOutlinePlusCircle } from "react-icons/ai";
 import { getCurrentDate } from "./getDate";
 import ColorDropdown from "./ColorDropdown";
+import TextareaAutosize from "@mui/base/TextareaAutosize";
 
 const NewNote = (props) => {
   const [input, setInput] = useState("");
   const [title, setTitle] = useState("");
   const [color, setColor] = useState("turquoise");
+
+  useEffect(() => {
+    const listener = (e) => {
+      if (e.keyCode === 13 && e.ctrlKey) {
+        e.preventDefault();
+        textSubmit();
+      }
+    };
+    document.addEventListener("keydown", listener);
+    return () => {
+      document.removeEventListener("keydown", listener);
+    };
+  });
 
   const textInput = (e) => {
     setInput(e.target.value);
@@ -44,36 +58,24 @@ const NewNote = (props) => {
   const changeColor = (e) => {
     setColor(e.target.id);
   };
-  useEffect(() => {
-    const listener = (e) => {
-      if (e.keyCode === 13 && e.ctrlKey) {
-        e.preventDefault();
-        textSubmit();
-      }
-    };
-    document.addEventListener("keydown", listener);
-    return () => {
-      document.removeEventListener("keydown", listener);
-    };
-  });
 
   return (
     <form>
       <div className={`note ${color}`}>
-        <textarea
+        <TextareaAutosize
           id="inputNote"
           onChange={titleInput}
           className={`title-text-area ${color}`}
           placeholder="Title."
           type="text"
-        ></textarea>
-        <textarea
+        />
+        <TextareaAutosize
           id="inputNote"
           onChange={textInput}
           className={`addNote-text-area ${color}`}
           placeholder="Add a new task..."
           type="text"
-        ></textarea>
+        />
         <div className="dropdown">
           <div className="note-content">
             <div className="containter-buttons">
