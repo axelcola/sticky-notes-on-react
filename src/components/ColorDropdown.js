@@ -63,9 +63,9 @@ export default function ColorDropdown(props) {
             currentColor={props.color === "brown"}
           />
           <Color
-            circleColor="grey"
+            circleColor="grey last-item"
             changeColor={props.changeColor}
-            currentColor={props.color === "grey"}
+            currentColor={props.color === "grey "}
           />
         </Dropdown.Menu>
       </Dropdown>

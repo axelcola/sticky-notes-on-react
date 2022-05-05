@@ -37,13 +37,13 @@ const Note = ({
   };
   return (
     <div className={`note ${color} ${className}`}>
-      <TextareaAutosize
+      <textarea
         className={`title-text-area  ${color}`}
         defaultValue={title}
         placeholder="Title."
       />
 
-      <TextareaAutosize
+      <textarea
         className={`note-text-area  ${color}`}
         defaultValue={text}
         onChange={changeTextNote}

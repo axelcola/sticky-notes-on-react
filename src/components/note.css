@@ -84,10 +84,9 @@
 .note-text-area {
   border: none;
   width: auto;
-  height: auto;
+  height: 100px;
   background-color: #fff475;
   resize: none;
-  margin-bottom: 50px;
 
 }
 
@@ -138,15 +137,15 @@
   border-width: 1.7px !important;
   border: solid;
 }
+.circle.last-item{
+  margin-right: -5px;
+}
 .dropdown-menu.show{
   display: flex !important;
   opacity: 1 !important;
 }
 .dropdown-item{
   display: flex !important;
-}
-.last-item{
-  margin-right: -5px;
 }
 .dropdown-item:hover{
   background-color: white !important;

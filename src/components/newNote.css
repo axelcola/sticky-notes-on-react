@@ -17,7 +17,7 @@
 .containter-buttons {
   display: flex;
   margin-bottom: -6px;
-  margin-right: 30px;
+  margin-right: -8px;
 }
 .button.newNote {
   background-color:#a7ffeb !important;
@@ -25,12 +25,9 @@
   border: none;
   align-items: flex-end;
 }
-.circle{
-  margin-right: 1em;
-  background-color: #a7ffeb !important;
-}
 .drop-items{
   display: flex;
+  margin-right: 10px;
 }
 .drops-buttons{
   border: none;
