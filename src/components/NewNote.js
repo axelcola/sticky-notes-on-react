@@ -5,6 +5,7 @@ import { AiOutlineSave } from "react-icons/ai";
 import { getCurrentDate } from "./getDate";
 import ColorDropdown from "./ColorDropdown";
 import TextareaAutosize from "@mui/base/TextareaAutosize";
+import OutsideClickHandler from "react-outside-click-handler";
 
 const NewNote = (props) => {
   const [input, setInput] = useState("");
@@ -14,7 +15,7 @@ const NewNote = (props) => {
 
   useEffect(() => {
     const listener = (e) => {
-      if (e.keyCode === 13 && e.ctrlKey) {
+      if (e.keyCode === 13 && e.ctrlKey && input !== "") {
         e.preventDefault();
         textSubmit();
       }
@@ -24,6 +25,11 @@ const NewNote = (props) => {
       document.removeEventListener("keydown", listener);
     };
   });
+  useEffect(() => {
+    document.addEventListener("mousedown", () => {
+      console.log("hola");
+    });
+  }, []);
 
   const textInput = (e) => {
     setInput(e.target.value);
@@ -51,6 +57,11 @@ const NewNote = (props) => {
     setTitle("");
     setTemplate("white");
   };
+  const outsideSend = () => {
+    if (input !== "") {
+      textSubmit();
+    }
+  };
   const sendPrevent = (e) => {
     e.preventDefault();
 
@@ -64,41 +75,43 @@ const NewNote = (props) => {
 
   return (
     <form>
-      <div className={`newNote ${templateColor} `}>
-        <TextareaAutosize
-          id="inputNote"
-          onChange={titleInput}
-          className={`newTitle ${templateColor}`}
-          placeholder="Title."
-          type="text"
-        />
-        <TextareaAutosize
-          id="inputNote"
-          onChange={textInput}
-          className={`newTextarea ${templateColor}`}
-          placeholder="Add a new task..."
-          type="text"
-        />
-        <div className="dropdown">
-          <div className="newNote-content">
-            <div className="containter-buttons">
-              <button
-                onClick={sendPrevent}
-                className={`button-newnote ${templateColor}`}
-              >
-                {" "}
-                <AiOutlineSave size={20} />
-              </button>
-              <div>
-                <ColorDropdown
-                  color={templateColor}
-                  changeColor={changeColor}
-                />
+      <OutsideClickHandler onOutsideClick={outsideSend}>
+        <div id="inputNote" className={`newNote ${templateColor} `}>
+          <TextareaAutosize
+            id="inputNote"
+            onChange={titleInput}
+            className={`newTitle ${templateColor}`}
+            placeholder="Title."
+            type="text"
+          />
+          <TextareaAutosize
+            id="inputNote"
+            onChange={textInput}
+            className={`newTextarea ${templateColor}`}
+            placeholder="Add a new task..."
+            type="text"
+          />
+          <div className="dropdown">
+            <div className="newNote-content">
+              <div className="containter-buttons">
+                <button
+                  onClick={sendPrevent}
+                  className={`button-newnote ${templateColor}`}
+                >
+                  {" "}
+                  <AiOutlineSave size={20} />
+                </button>
+                <div>
+                  <ColorDropdown
+                    color={templateColor}
+                    changeColor={changeColor}
+                  />
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </OutsideClickHandler>
     </form>
   );
 };
