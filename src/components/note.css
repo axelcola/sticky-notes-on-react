@@ -3,13 +3,12 @@
     background-color: #fff475;
     border-radius: 10px;
     padding: 1rem;
-    min-height: 170px;
     max-width: 250px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     font-family: 'Open Sans', sans-serif;
-    font-size:large;
+    font: size 20px;
     opacity: 1;
     resize: none;
     
@@ -24,18 +23,18 @@
   padding: 1rem;
   display: flex;
   flex-direction: column;
-  box-shadow: -1px 3px 5px #bdbebf;
+  box-shadow: -0.1px 1.5px 3px 1.5px #bdbebf;
 
 }
 .newTextarea{
   height: 60px;
   resize: none;
-  font-size: 20px;
+  font-size: 15px;
 }
 .newTitle{
   resize: none;
-  height: 60px;
-  font-size: 30px;
+  height: 30px;
+  font-size: 20px;
 }
 .newNote-content{
   display: flex;
@@ -88,6 +87,7 @@
   height: auto;
   background-color: #fff475;
   resize: none;
+  margin-bottom: 50px;
 
 }
 

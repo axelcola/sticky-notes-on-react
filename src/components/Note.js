@@ -50,40 +50,38 @@ const Note = ({
         placeholder="Add a new task..."
       />
       <div className="note-content">
-        <div className="note-content">
-          <div className="containter-buttons">
-            {deleted ? (
-              <>
-                <button
-                  onClick={() => deleteNote(id)}
-                  className={`button  ${color} `}
-                >
-                  {" "}
-                  <MdOutlineRestorePage className={`button  ${color}`} />
-                </button>
-                <button
-                  onClick={() => deletePerm(id)}
-                  className={`button  ${color}`}
-                >
-                  {" "}
-                  <BiTrash />
-                </button>
-              </>
-            ) : (
-              <>
-                <button
-                  onClick={() => deleteNote(id)}
-                  className={`button  ${color}`}
-                >
-                  {" "}
-                  <BiTrash />
-                </button>
+        <div className="containter-buttons">
+          {deleted ? (
+            <>
+              <button
+                onClick={() => deleteNote(id)}
+                className={`button  ${color} `}
+              >
+                {" "}
+                <MdOutlineRestorePage className={`button  ${color}`} />
+              </button>
+              <button
+                onClick={() => deletePerm(id)}
+                className={`button  ${color}`}
+              >
+                {" "}
+                <BiTrash />
+              </button>
+            </>
+          ) : (
+            <>
+              <button
+                onClick={() => deleteNote(id)}
+                className={`button  ${color}`}
+              >
+                {" "}
+                <BiTrash />
+              </button>
 
-                <ColorDropdown color={color} changeColor={changeColor} />
-              </>
-            )}
-            <small className="date">{date}</small>
-          </div>
+              <ColorDropdown color={color} changeColor={changeColor} />
+            </>
+          )}
+          <small className="date">{date}</small>
         </div>
       </div>
     </div>
