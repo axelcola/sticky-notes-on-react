@@ -45,8 +45,8 @@ const NewNote = (props) => {
     };
     props.onSubmit(newTask);
     document.getElementById("inputNote").value = "";
-    setColor("turquoise");
     setInput("");
+    setColor("turquoise");
     setTitle("");
   };
   const sendPrevent = (e) => {

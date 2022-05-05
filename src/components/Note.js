@@ -40,7 +40,7 @@ const Note = ({
       <TextareaAutosize
         className={`title-text-area  ${color}`}
         defaultValue={title}
-        placeholder="Title"
+        placeholder="Title."
       />
 
       <TextareaAutosize
