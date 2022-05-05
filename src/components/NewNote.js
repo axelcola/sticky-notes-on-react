@@ -10,6 +10,7 @@ const NewNote = (props) => {
   const [input, setInput] = useState("");
   const [title, setTitle] = useState("");
   const [color, setColor] = useState("turquoise");
+  const [templateColor, setTemplate] = useState("white");
 
   useEffect(() => {
     const listener = (e) => {
@@ -48,6 +49,7 @@ const NewNote = (props) => {
     setInput("");
     setColor("turquoise");
     setTitle("");
+    setTemplate("white");
   };
   const sendPrevent = (e) => {
     e.preventDefault();
@@ -57,37 +59,41 @@ const NewNote = (props) => {
 
   const changeColor = (e) => {
     setColor(e.target.id);
+    setTemplate(e.target.id);
   };
 
   return (
     <form>
-      <div className={`note ${color}`}>
+      <div className={`newNote ${templateColor} `}>
         <TextareaAutosize
           id="inputNote"
           onChange={titleInput}
-          className={`title-text-area ${color}`}
+          className={`newTitle ${templateColor}`}
           placeholder="Title."
           type="text"
         />
         <TextareaAutosize
           id="inputNote"
           onChange={textInput}
-          className={`addNote-text-area ${color}`}
+          className={`newTextarea ${templateColor}`}
           placeholder="Add a new task..."
           type="text"
         />
         <div className="dropdown">
-          <div className="note-content">
+          <div className="newNote-content">
             <div className="containter-buttons">
               <button
                 onClick={sendPrevent}
-                className={`button-newnote ${color}`}
+                className={`button-newnote ${templateColor}`}
               >
                 {" "}
                 <AiOutlinePlusCircle />
               </button>
-              <div className="button">
-                <ColorDropdown color={color} changeColor={changeColor} />
+              <div>
+                <ColorDropdown
+                  color={templateColor}
+                  changeColor={changeColor}
+                />
               </div>
             </div>
           </div>

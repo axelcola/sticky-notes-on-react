@@ -6,7 +6,7 @@ import Color from "./Color";
 export default function ColorDropdown(props) {
   return (
     <>
-      <Dropdown className={`button  ${props.color} dropdown `}>
+      <Dropdown className={`  ${props.color} dropdown `}>
         <Dropdown.Toggle variant="none" className="drop-toggler">
           <CgColorBucket />
         </Dropdown.Toggle>
@@ -63,9 +63,9 @@ export default function ColorDropdown(props) {
             currentColor={props.color === "brown"}
           />
           <Color
-            circleColor="grey last-item"
+            circleColor="grey"
             changeColor={props.changeColor}
-            currentColor={props.color === "grey last-item"}
+            currentColor={props.color === "grey"}
           />
         </Dropdown.Menu>
       </Dropdown>

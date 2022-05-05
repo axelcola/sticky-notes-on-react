@@ -54,8 +54,8 @@ const NoteList = () => {
     <>
       <NavbarNotes number={tasks} searcher={searcherInfo} paperbin={false} />
       <div className="container">
+        <NewNote onSubmit={addTask} />
         <div className=" notelist">
-          <NewNote onSubmit={addTask} />
           {tasks.map((task) => (
             <Note
               key={task.id}
