@@ -38,6 +38,7 @@ const PaperBin = () => {
     if (window.confirm("Are you sure you want to delete all this notes?")) {
       const newArrayNotes = tasks.filter((task) => !task.deleted);
       setDelTasks(newArrayNotes);
+      setDelTasks([]);
       window.localStorage.setItem("notes", JSON.stringify(newArrayNotes));
       console.log(delTasks);
     }
