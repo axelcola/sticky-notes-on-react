@@ -16,8 +16,15 @@ const NavbarNotes = (props) => {
         <Link className="navbar-brand home" to="/sticky-notes-on-react">
           Sticky Notes
         </Link>
+        {props.paperbin ? (
+          <></>
+        ) : (
+          <div className="searcher ml-auto s-screen">
+            <Searcher searcher={props.searcher} />
+          </div>
+        )}
         <button
-          className="navbar-toggler bg-ligth "
+          className="navbar-toggler bg-ligth toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarSupportedContent"
@@ -65,7 +72,7 @@ const NavbarNotes = (props) => {
           {props.paperbin ? (
             <></>
           ) : (
-            <div className="searcher ml-auto">
+            <div className="searcher ml-auto l-screen">
               <Searcher searcher={props.searcher} />
             </div>
           )}

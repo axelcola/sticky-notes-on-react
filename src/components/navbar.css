@@ -25,20 +25,53 @@ p{
     box-sizing: border-box;
 
     width: 70%;
+    color: #393d42 !important;
 
 }
-@media (max-width: 1001px){
+
+@media (max-width: 1100px){
+    .searcher{
+        width: 40%;
+    }
+  
+}
+@media (max-width: 990px){
     .searcher{
         margin: auto;
     }
+    .searcher.l-screen{
+        display: none;
+    }
+    .home{margin-top: -20px;}
     
 }
+@media (max-width: 600px){
+    .searcher.s-screen{
+        width: 20%;
+    }
+
+    .home{
+        margin-left: 0;
+    }
+}
+@media (min-width: 991px){
+    .searcher.s-screen{
+        display: none;
+    }
+
+}
+
+
 .nav-item{
     margin:auto;
     align-items: center;
 }
 .navbar .navbar-toggler .icon-bar {
     background: black !important;
+}
+.toggler{
+    margin-top: -17px;
+
 }
 .toggler-icon{
     color: #393d42 !important;
