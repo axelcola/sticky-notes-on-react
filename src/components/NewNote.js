@@ -62,7 +62,6 @@ const NewNote = (props) => {
       deleted: false,
       date: getCurrentDate(),
       color: color,
-      placeholder: "Add a new task...",
     };
     props.onSubmit(newTask);
     document.getElementById("inputNote").value = "";

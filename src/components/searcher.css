@@ -6,26 +6,11 @@
     padding: 5px;
     border-radius: 10px;
     color: #f1f3f4;
-    background-color: #ebebeb;
       
       
 }
-@media (max-width: 990px){
-    .searcher-box{
-        border: none;
-        color: white;
-        background-color: white;
 
-    }
-}
-.searcher-box:hover{
-    box-shadow: 0.1px 1.5px 1px #bdbebf !important;    
-    ;
-}
-.searcher-box:active{
-    box-shadow: 0.1px 1.5px 1px #bdbebf !important;    
-    ;
-}
+
 .my-searcher{
     width: 80%;
     border: none;
@@ -36,4 +21,11 @@
     margin-left: -120px;
     margin-top: -3px;
     color: #494d51 !important;   
+}
+.navbar.collapse {
+    display:flex;
+}
+.navbar.collapsing,
+.navbar.show {
+    background:white !important;
 }

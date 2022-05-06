@@ -3,7 +3,6 @@ import "./note.css";
 import { BiTrash } from "react-icons/bi";
 import { MdOutlineRestorePage } from "react-icons/md";
 import ColorDropdown from "./ColorDropdown";
-import TextareaAutosize from "@mui/base/TextareaAutosize";
 
 const Note = ({
   text,
@@ -15,7 +14,6 @@ const Note = ({
   className,
   color,
   editNote,
-  placeholder,
   title,
 }) => {
   const changeTextNote = (e) => {
@@ -40,7 +38,7 @@ const Note = ({
       <textarea
         className={`title-text-area  ${color}`}
         defaultValue={title}
-        placeholder="Title."
+        placeholder="Task Name"
       />
 
       <textarea
