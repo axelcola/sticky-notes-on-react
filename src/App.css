@@ -53,3 +53,6 @@
   -webkit-touch-callout: none;
   -webkit-user-select: none; 
 }
+h6{
+  text-align: right;
+}

@@ -11,7 +11,7 @@ const NavbarNotes = (props) => {
   const nNotes = props.number.filter((note) => note.deleted).length;
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-ligth bg-ligth mb-5">
+    <nav className="navbar navbar-expand-sm navbar-ligth bg-ligth mb-5">
       <div className="container-fluid">
         <Link className="navbar-brand home" to="/sticky-notes-on-react">
           Sticky Notes
@@ -24,7 +24,7 @@ const NavbarNotes = (props) => {
           </div>
         )}
         <button
-          className="navbar-toggler bg-ligth toggler"
+          className="navbar-toggler  bg-ligth toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarSupportedContent"

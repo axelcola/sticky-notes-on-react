@@ -93,7 +93,7 @@ const NewNote = (props) => {
             id="inputNote"
             onChange={titleInput}
             className={`newTitle ${templateColor}`}
-            placeholder="Title."
+            placeholder="Task Name"
             type="text"
           />
           <TextareaAutosize
