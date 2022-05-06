@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/sticky-notes-on-react/static/css/main.18d7464c.css",
-    "main.js": "/sticky-notes-on-react/static/js/main.896b6b6f.js",
+    "main.css": "/sticky-notes-on-react/static/css/main.e0d98b3b.css",
+    "main.js": "/sticky-notes-on-react/static/js/main.c4c2c0c7.js",
     "index.html": "/sticky-notes-on-react/index.html",
-    "main.18d7464c.css.map": "/sticky-notes-on-react/static/css/main.18d7464c.css.map",
-    "main.896b6b6f.js.map": "/sticky-notes-on-react/static/js/main.896b6b6f.js.map"
+    "main.e0d98b3b.css.map": "/sticky-notes-on-react/static/css/main.e0d98b3b.css.map",
+    "main.c4c2c0c7.js.map": "/sticky-notes-on-react/static/js/main.c4c2c0c7.js.map"
   },
   "entrypoints": [
-    "static/css/main.18d7464c.css",
-    "static/js/main.896b6b6f.js"
+    "static/css/main.e0d98b3b.css",
+    "static/js/main.c4c2c0c7.js"
   ]
 }
