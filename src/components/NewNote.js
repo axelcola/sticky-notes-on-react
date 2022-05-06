@@ -10,8 +10,23 @@ import OutsideClickHandler from "react-outside-click-handler";
 const NewNote = (props) => {
   const [input, setInput] = useState("");
   const [title, setTitle] = useState("");
-  const [color, setColor] = useState("turquoise");
+  const [color, setColor] = useState("yellow");
   const [templateColor, setTemplate] = useState("white");
+  var colorsList = [
+    "yellow",
+    "red",
+    "green",
+    "orange",
+    "turquoise",
+    "blue",
+    "dark-blue",
+    "violet",
+    "pink",
+    "brown",
+    "grey",
+  ];
+  var rand = Math.floor(Math.random() * colorsList.length);
+  var rColor = colorsList[rand];
 
   useEffect(() => {
     const listener = (e) => {
@@ -35,6 +50,11 @@ const NewNote = (props) => {
   };
 
   const textSubmit = (e) => {
+    console.log(rColor, color, templateColor === "white");
+    if (templateColor === "white") {
+      setColor(rColor);
+    }
+
     const newTask = {
       id: uuidv4(),
       text: input,
@@ -47,7 +67,6 @@ const NewNote = (props) => {
     props.onSubmit(newTask);
     document.getElementById("inputNote").value = "";
     setInput("");
-    setColor("turquoise");
     setTitle("");
     setTemplate("white");
   };
