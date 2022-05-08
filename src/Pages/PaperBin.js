@@ -69,6 +69,15 @@ const PaperBin = () => {
           ))}
         </div>
       </div>
+      {delTasks.length ? (
+        <></>
+      ) : (
+        <>
+          <div className="title-container">
+            <h4>Deleted notes will appear here.</h4>
+          </div>
+        </>
+      )}
     </>
   );
 };

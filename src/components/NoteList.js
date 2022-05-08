@@ -3,7 +3,6 @@ import NavbarNotes from "./NavbarNotes";
 import NewNote from "./NewNote";
 import Note from "./Note";
 import "./noteList.css";
-import { v4 as uuidv4 } from "uuid";
 
 const NoteList = () => {
   const [tasks, setTasks] = useState([]);
@@ -51,14 +50,6 @@ const NoteList = () => {
     const savedTasks = JSON.parse(localStorage.getItem("notes"));
     if (savedTasks) setTasks(savedTasks);
   }, []);
-
-  const reorder = (list, startIndex, endIndex) => {
-    const result = [...list];
-    const [removed] = result.splice(startIndex, 1);
-    result.splice(endIndex, 0, removed);
-
-    return result;
-  };
 
   return (
     <>

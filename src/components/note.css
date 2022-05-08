@@ -11,7 +11,6 @@
     font: size 20px;
     opacity: 1;
     resize: none;  
-    cursor: grab;
     
 }
 
@@ -98,7 +97,6 @@
   background-color:#fff475;
   box-shadow: none;
   border: none;
-  align-items: flex-end;
 }
 .color-button{
   cursor: pointer;
