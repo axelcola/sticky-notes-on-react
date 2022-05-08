@@ -51,25 +51,17 @@ p{
         border:solid ;
         border-color: #ababab;    
         border-width: 0.5px;   
-
-
-    }
-    
-    
+    }   
 }
 @media (max-width: 1100px){
     .searcher{
         margin-right: 30%;
-
         width: 50%;
-
     }
 }
 @media (max-width: 798px){
     .searcher{
         margin-right: 20%;
-
-
     }
 }
 @media (max-width: 537px){
@@ -77,16 +69,12 @@ p{
         margin-left: 15%;
         width: 28%;
     }
-  
 }
 @media (min-width: 575px){
     .searcher.s-screen{
         display: none;
     }
-
 }
-
-
 .nav-item{
     margin:auto;
     align-items: center;
