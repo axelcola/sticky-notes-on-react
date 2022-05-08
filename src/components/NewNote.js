@@ -50,7 +50,6 @@ const NewNote = (props) => {
   };
 
   const textSubmit = (e) => {
-    console.log(rColor, color, templateColor === "white");
     if (templateColor === "white") {
       setColor(rColor);
     }
@@ -64,10 +63,10 @@ const NewNote = (props) => {
       color: color,
     };
     props.onSubmit(newTask);
-    document.getElementById("inputNote").value = "";
     setInput("");
     setTitle("");
     setTemplate("white");
+    document.getElementById("inputNote").value = "";
   };
   const outsideSend = () => {
     if (input !== "") {
@@ -95,6 +94,7 @@ const NewNote = (props) => {
             className={`newTitle ${templateColor}`}
             placeholder="Task Name"
             type="text"
+            value={title}
           />
           <TextareaAutosize
             id="inputNote"
@@ -102,6 +102,7 @@ const NewNote = (props) => {
             className={`newTextarea ${templateColor}`}
             placeholder="Add a new task..."
             type="text"
+            value={input}
           />
           <div className="dropdown">
             <div className="newNote-content">
