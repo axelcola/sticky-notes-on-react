@@ -6,6 +6,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import "./navbar.css";
 import "bootstrap/dist/js/bootstrap.min.js";
 import Searcher from "./Searcher";
+import Button from "react-bootstrap/Button";
 
 const NavbarNotes = (props) => {
   const nNotes = props.number.filter((note) => note.deleted).length;
@@ -77,6 +78,15 @@ const NavbarNotes = (props) => {
             </div>
           )}
           <div className="white"></div>
+          {props.paperbin ? (
+            <>
+              <Button variant="danger" onClick={props.deleteAll}>
+                Delete All
+              </Button>{" "}
+            </>
+          ) : (
+            <></>
+          )}
         </div>
       </div>
     </nav>

@@ -46,7 +46,11 @@ const PaperBin = () => {
 
   return (
     <>
-      <NavbarNotes number={delTasks} paperbin={true} />
+      <NavbarNotes
+        number={delTasks}
+        paperbin={true}
+        deleteAll={deleteAllNotes}
+      />
       <div className="container">
         <div className=" notelist">
           {delTasks.map((task) => (
@@ -65,23 +69,6 @@ const PaperBin = () => {
           ))}
         </div>
       </div>
-      {delTasks.length ? (
-        <>
-          <button className="new-note-fixed">
-            <BiTrash
-              className="trash-icon"
-              size={60}
-              onClick={deleteAllNotes}
-            />
-          </button>
-        </>
-      ) : (
-        <>
-          <div className="title-container">
-            <h4>Deleted notes will appear here.</h4>
-          </div>
-        </>
-      )}
     </>
   );
 };
