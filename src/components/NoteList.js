@@ -67,7 +67,7 @@ const NoteList = () => {
         <NewNote onSubmit={addTask} />
 
         <div className=" notelist">
-          {tasks.map((task, index) => (
+          {tasks.map((task) => (
             <Note
               key={task.id}
               id={task.id}
@@ -82,7 +82,6 @@ const NoteList = () => {
               title={task.title}
             />
           ))}
-          )
         </div>
       </div>
     </>

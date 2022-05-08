@@ -24,3 +24,8 @@
     user-select: none; 
     max-width: 60px;
     min-width: 60px  }
+    
+
+    textarea::-webkit-scrollbar{
+    width: 0px;
+}
