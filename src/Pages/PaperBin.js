@@ -34,6 +34,16 @@ const PaperBin = () => {
       window.localStorage.setItem("notes", JSON.stringify(newNotesArray));
     }
   };
+  const searcherInfo = (textsearch) => {
+    const savedTasks = JSON.parse(localStorage.getItem("notes"));
+    if (savedTasks) setDelTasks(savedTasks);
+    if (textsearch) {
+      const results = savedTasks.filter((task) =>
+        task.text.toLowerCase().includes(textsearch)
+      );
+      setDelTasks(results);
+    }
+  };
   const deleteAllNotes = () => {
     if (window.confirm("Are you sure you want to delete all this notes?")) {
       const newArrayNotes = tasks.filter((task) => !task.deleted);
@@ -47,6 +57,7 @@ const PaperBin = () => {
   return (
     <>
       <NavbarNotes
+        searcher={searcherInfo}
         number={delTasks}
         paperbin={true}
         deleteAll={deleteAllNotes}

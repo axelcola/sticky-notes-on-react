@@ -72,13 +72,13 @@ const NavbarNotes = (props) => {
           </div>
 
           {props.paperbin ? (
-            <>
+            <div>
               <Button variant="danger" onClick={props.deleteAll}>
-                Delete All
+                DeleteAll
               </Button>{" "}
-            </>
+            </div>
           ) : (
-            <div className="white-box"></div>
+            <div className="white box"></div>
           )}
         </div>
       </div>
