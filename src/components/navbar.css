@@ -48,7 +48,9 @@ p{
     {
         background-color:rgb(255, 255, 255);
         border-radius: 10px;
-        box-shadow: -0.1px 1.5px 3px 1.5px #bdbebf;
+        border:solid ;
+        border-color: #ababab;    
+        border-width: 0.5px;   
 
 
     }
