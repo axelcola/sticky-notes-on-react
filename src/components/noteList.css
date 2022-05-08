@@ -7,6 +7,8 @@
     align-items: start;
     grid-auto-flow: dense;
     grid-gap:20px;
+    margin-left:-10px;
+    margin-right: -10px;
   }
 
 
