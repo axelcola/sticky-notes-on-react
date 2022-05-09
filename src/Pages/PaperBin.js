@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import NavbarNotes from "../components/NavbarNotes";
 import Note from "../components/Note";
-import { BiTrash } from "react-icons/bi";
 import "./paperBin.css";
 
 const PaperBin = () => {
@@ -47,7 +46,11 @@ const PaperBin = () => {
     }
   };
   const deleteAllNotes = () => {
-    if (window.confirm("Are you sure you want to delete all this notes?")) {
+    if (
+      window.confirm(
+        "Are you sure you want to permanently erase all this items in the Trash? You can't undo this item"
+      )
+    ) {
       const newArrayNotes = tasks.filter((task) => !task.deleted);
       setDelTasks(newArrayNotes);
       setDelTasks([]);

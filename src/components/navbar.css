@@ -29,9 +29,7 @@ p{
     color: #393d42 !important;
 
 }
-.searcher.my-searcher{
-    width: 100%;
-}
+
 @media (max-width: 1300px){
     .searcher{
         margin-right: 20%;
@@ -49,7 +47,7 @@ p{
 }
 @media (max-width: 650px){
     .searcher{
-        width: 40%;
+        width: 45%;
         margin-right: -10px;
     }
   
@@ -88,8 +86,8 @@ p{
 }
 @media (max-width: 470px ){
     .searcher{
-        width: 20%;
-        margin-right: 0% !important;
+        width: 40%;
+        margin-right: -15% !important;
     }
 
 }

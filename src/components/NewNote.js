@@ -103,6 +103,7 @@ const NewNote = (props) => {
             placeholder="Add a new task..."
             type="text"
             value={input}
+            autoFocus
           />
           <div className="dropdown">
             <div className="newNote-content">

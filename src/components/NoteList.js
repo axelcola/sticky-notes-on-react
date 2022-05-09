@@ -18,7 +18,7 @@ const NoteList = () => {
     if (savedTasks) setTasks(savedTasks);
     if (textsearch) {
       const results = savedTasks.filter((task) =>
-        task.text.toLowerCase().includes(textsearch)
+        task.title.toLowerCase().includes(textsearch)
       );
       setTasks(results);
     }
@@ -28,6 +28,7 @@ const NoteList = () => {
       if (task.id === note.id) {
         task.text = note.text;
         task.color = note.color;
+        task.title = note.title;
       }
       return task;
     });

@@ -21,6 +21,7 @@ const Note = ({
       id: id,
       text: e.target.value,
       color: color,
+      title: title,
     };
     editNote(editProps);
   };
@@ -30,6 +31,17 @@ const Note = ({
       id: id,
       text: text,
       color: e.target.id,
+      title: title,
+    };
+    editNote(editProps);
+  };
+
+  const changeTitle = (e) => {
+    const editProps = {
+      id: id,
+      text: text,
+      color: color,
+      title: e.target.value,
     };
     editNote(editProps);
   };
@@ -38,6 +50,7 @@ const Note = ({
       <textarea
         className={`title-text-area  ${color}`}
         defaultValue={title}
+        onChange={changeTitle}
         placeholder="Task Name"
       />
 
