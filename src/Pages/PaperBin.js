@@ -27,7 +27,9 @@ const PaperBin = () => {
   };
   const deletePerm = (id) => {
     if (
-      window.confirm("Are you sure you want to delete this note permanently?")
+      window.confirm(
+        "Are you sure you want to permanently erase the items in the Trash? You can't undo this item"
+      )
     ) {
       let newNotesArray = delTasks.filter((note) => note.id !== id);
       setDelTasks(newNotesArray);
