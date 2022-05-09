@@ -39,8 +39,10 @@ const PaperBin = () => {
     const savedTasks = JSON.parse(localStorage.getItem("notes"));
     if (savedTasks) setDelTasks(savedTasks);
     if (textsearch) {
-      const results = savedTasks.filter((task) =>
-        task.text.toLowerCase().includes(textsearch)
+      const results = savedTasks.filter(
+        (task) =>
+          task.text.toLowerCase().includes(textsearch) ||
+          task.title.toLowerCase().includes(textsearch)
       );
       setDelTasks(results);
     }

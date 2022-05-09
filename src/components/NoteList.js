@@ -17,8 +17,10 @@ const NoteList = () => {
     const savedTasks = JSON.parse(localStorage.getItem("notes"));
     if (savedTasks) setTasks(savedTasks);
     if (textsearch) {
-      const results = savedTasks.filter((task) =>
-        task.title.toLowerCase().includes(textsearch)
+      const results = savedTasks.filter(
+        (task) =>
+          task.text.toLowerCase().includes(textsearch) ||
+          task.title.toLowerCase().includes(textsearch)
       );
       setTasks(results);
     }
