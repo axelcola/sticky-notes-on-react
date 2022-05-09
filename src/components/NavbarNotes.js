@@ -6,11 +6,10 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import "./navbar.css";
 import "bootstrap/dist/js/bootstrap.min.js";
 import Searcher from "./Searcher";
-import Button from "react-bootstrap/Button";
 
 const NavbarNotes = (props) => {
   const nNotes = props.number.filter((note) => note.deleted).length;
-
+  console.log(props.number);
   return (
     <nav className="navbar navbar-expand-sm navbar-ligth bg-ligth mb-5">
       <div className="container-fluid">
@@ -71,7 +70,7 @@ const NavbarNotes = (props) => {
             <Searcher searcher={props.searcher} />
           </div>
 
-          {props.paperbin ? (
+          {props.paperbin && props.number.length ? (
             <div>
               <button className="box delete-button" onClick={props.deleteAll}>
                 Empty Trash

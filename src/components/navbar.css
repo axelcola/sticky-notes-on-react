@@ -29,6 +29,9 @@ p{
     color: #393d42 !important;
 
 }
+.searcher.my-searcher{
+    width: 100%;
+}
 @media (max-width: 1300px){
     .searcher{
         margin-right: 20%;
@@ -70,12 +73,25 @@ p{
         border-color: #ababab;    
         border-width: 0.5px;   
     }   
+    .delete-button{
+        margin-bottom: 4px;
+    }
+    .white.box{
+        display: none;
+    }
 }
 
 @media (min-width: 575px){
     .searcher.s-screen{
         display: none;
     }
+}
+@media (max-width: 470px ){
+    .searcher{
+        width: 20%;
+        margin-right: 0% !important;
+    }
+
 }
 .nav-item{
     margin:auto;
