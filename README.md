@@ -11,7 +11,7 @@ This is a list of functions that the page should have that I got on the internet
 
 • As user, i can edit a Post.
 
-• As user, i can see the date of the last modification.
+• As a user, I can see the date of creation of the note
 
 • As user, i can move a Post to the Paper Bin.
 
