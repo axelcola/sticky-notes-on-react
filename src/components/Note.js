@@ -45,6 +45,28 @@ const Note = ({
     };
     editNote(editProps);
   };
+
+  const solveDeleted = deleted ? (
+    <>
+      <button onClick={() => deleteNote(id)} className={`button  ${color} `}>
+        {" "}
+        <MdOutlineRestorePage size={20} className={`button  ${color}`} />
+      </button>
+      <button onClick={() => deletePerm(id)} className={`button  ${color}`}>
+        {" "}
+        <BiTrash size={20} />
+      </button>
+    </>
+  ) : (
+    <>
+      <button onClick={() => deleteNote(id)} className={`button  ${color}`}>
+        {" "}
+        <BiTrash size={20} />
+      </button>
+
+      <ColorDropdown color={color} changeColor={changeColor} />
+    </>
+  );
   return (
     <div className={`note ${color} ${className}`}>
       <textarea
@@ -62,39 +84,7 @@ const Note = ({
       />
       <div className="note-content">
         <div className="containter-buttons">
-          {deleted ? (
-            <>
-              <button
-                onClick={() => deleteNote(id)}
-                className={`button  ${color} `}
-              >
-                {" "}
-                <MdOutlineRestorePage
-                  size={20}
-                  className={`button  ${color}`}
-                />
-              </button>
-              <button
-                onClick={() => deletePerm(id)}
-                className={`button  ${color}`}
-              >
-                {" "}
-                <BiTrash size={20} />
-              </button>
-            </>
-          ) : (
-            <>
-              <button
-                onClick={() => deleteNote(id)}
-                className={`button  ${color}`}
-              >
-                {" "}
-                <BiTrash size={20} />
-              </button>
-
-              <ColorDropdown color={color} changeColor={changeColor} />
-            </>
-          )}
+          {solveDeleted}
           <small className="date">{date}</small>
         </div>
       </div>

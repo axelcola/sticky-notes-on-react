@@ -136,8 +136,9 @@
   border-width: 1.7px !important;
   border: solid;
 }
-.circle.last-item{
+.circle:last-child{
   margin-right: -5px;
+  
 }
 .dropdown-menu.show{
   display: flex !important;

@@ -9,7 +9,6 @@ import Searcher from "./Searcher";
 
 const NavbarNotes = (props) => {
   const nNotes = props.number.filter((note) => note.deleted).length;
-  console.log(props.number);
   return (
     <nav className="navbar navbar-expand-sm navbar-ligth bg-ligth mb-5">
       <div className="container-fluid">

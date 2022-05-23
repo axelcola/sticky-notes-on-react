@@ -57,7 +57,6 @@ const PaperBin = () => {
       setDelTasks(newArrayNotes);
       setDelTasks([]);
       window.localStorage.setItem("notes", JSON.stringify(newArrayNotes));
-      console.log(delTasks);
     }
   };
 
