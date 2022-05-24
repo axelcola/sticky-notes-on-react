@@ -10,6 +10,7 @@ function App() {
       <Route path="/sticky-notes-on-react/paper-bin" component={PaperBin} />
       <Route path="/sticky-notes-on-react" component={NoteList} />
       <Route path="/" component={NoteList} />
+      <Route path="/:rest*" component={NoteList} />
       <Footer />
     </div>
   );
