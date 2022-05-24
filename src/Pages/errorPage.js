@@ -4,7 +4,11 @@ import computer from "../images/computer.png";
 
 export default function errorPage() {
   return (
+<<<<<<< HEAD
+    <div className="error">
+=======
     <div className="box">
+>>>>>>> master
       <Link to="/sticky-notes-on-react">
         <img src={computer} alt="404error" className="img" />
       </Link>
