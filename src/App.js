@@ -8,6 +8,7 @@ import errorPage from "./Pages/errorPage";
 function App() {
   return (
     <div className="App">
+<<<<<<< HEAD
       <Switch>
         <Route path="/sticky-notes-on-react/paper-bin" component={PaperBin} />
         <Route path="/sticky-notes-on-react" component={NoteList} />
@@ -18,6 +19,12 @@ function App() {
           className="error"
         />
       </Switch>
+=======
+      <Route path="/sticky-notes-on-react/paper-bin" component={PaperBin} />
+      <Route path="/sticky-notes-on-react" component={NoteList} />
+      <Route path="/" component={NoteList} />
+
+>>>>>>> master
       <Footer />
     </div>
   );
