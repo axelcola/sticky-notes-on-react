@@ -12,11 +12,7 @@ function App() {
         <Route path="/sticky-notes-on-react/paper-bin" component={PaperBin} />
         <Route path="/sticky-notes-on-react" component={NoteList} />
         <Route path="/" component={NoteList} />
-        <Route
-          path="/sticky-notes-on-react/:rest*"
-          component={errorPage}
-          className="error"
-        />
+        <Route path=":rest*" component={errorPage} className="error" />
       </Switch>
 
       <Footer />
